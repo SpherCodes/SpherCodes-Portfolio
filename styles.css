@@ -1,4 +1,140 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: radial-gradient(circle at bottom, #9382ca, #150e24 80%);
+    color: #f4f4f4;
+    line-height: 1.6;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Profile Section */
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+#profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#profile img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Styling */
+nav {
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+nav a {
+    color: #FCFCFC;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    border: 3px  solid;
+    border-image: linear-gradient(to right, #150e24, #9382ca) 1;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Headings */
+h1 {
+    font-size: 3em;
+    color: #e9e8e8;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+h2 {
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+    color: #f4f4f4;
+    margin-bottom: 30px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 1em;
+    background-color: #2a1846;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 1vh;
+    padding: 9px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #333;
+    color: #150e24;
+    border-radius: 6px;
+}
+
+#socials {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#socials a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#socials a:hover {
+    color: #c2bbd8;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5erm;
+    color: #f4f4f4;
+    font-size: 0.7em;
 }

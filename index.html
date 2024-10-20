@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Sphe-Dev</title>
+</head>
+<body>
+    <section id="Navigation">
+        <nav>
+            <ul>
+                <li><a href="/index.html" style="color: #CE8147;"><ion-icon name="home-outline"></ion-icon><span> Home</span></a></li>
+                <li><a href="#projects"><ion-icon name="folder-open-outline"></ion-icon><span> Projects</span></a></li>
+                <li><a href="#skills"><ion-icon name="hammer-outline"></ion-icon><span> Skills</span></a></li>
+            </ul>
+        </nav>
+    </section>
+    
+
+    <section id="main-content">
+        <div id="left-section">
+            <section id="profile-card">
+                <img src="/lib/images/Profile-picture.jpg" alt="Profile Picture" id="profile-image">
+                <h1>Siphesihle Mvelase</h1>
+                <p> Aspiring software engineer who Loves using code to build cool things</p>
+                <section id="social-links">
+                    <ul>
+                        <li><a href="https://www.instagram.com/sphersphiwe?igsh=Ym4xa24zYXY2MXVu&utm_source=qr"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="https://www.linkedin.com/in/siphesihle-mvelase-4077341b6/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="https://github.com/spher04"><ion-icon name="logo-github"></ion-icon></a></li>
+                        <li><a href="mailto:2021335696@ufs4life.ac.za"><ion-icon name="mail-outline"></ion-icon></a></li>
+                    </ul>
+                </section>
+            </section>
+            
+        </div>        
+        
+        <div id="right-section">
+            <h1>aspiring software </h1>
+            <h1 id="job-title">developer</h1>
+            <p>
+                I am passionate about using code to solve real-world problems and bring creative ideas to life. 
+                Whether it's developing efficient solutions or building innovative applications, I enjoy creating projects that have a meaningful impact.
+            </p>
+            
+            <section class="button-container">
+                <button type="button" class="button">Resume</button>
+                <buttons type="button" class="button">Contact Me</buttons>
+            </section>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<h1 id="job-title"></h1>
+
+<script>
+  const jobTitleElement = document.getElementById("job-title");
+  const titles = ["Developer", "Engineer"];
+  let currentIndex = 0;
+  let isErasing = false;
+
+  function typeText(text) {
+    jobTitleElement.textContent = "";
+    jobTitleElement.style.width = "0";
+
+    // Typing animation
+    jobTitleElement.textContent = text;
+    jobTitleElement.style.animation = "typing 2s steps(10, end) 1 forwards"; 
+  }
+
+  function eraseText() {
+    jobTitleElement.style.animation = "erasing 1.5s steps(10, end) 1 forwards"; 
+  }
+
+  function loopTitles() {
+    if (!isErasing) {
+      typeText(titles[currentIndex]);
+      setTimeout(() => {
+        isErasing = true;
+        setTimeout(loopTitles, 2000);
+      }, 2000);
+    } else {
+      eraseText();
+      setTimeout(() => {
+        isErasing = false;
+        currentIndex = (currentIndex + 1) % titles.length;
+        setTimeout(loopTitles, 1500);
+      }, 1500);
+    }
+  }
+
+  // Start the animation loop
+  loopTitles();
+</script>
+
+</html>

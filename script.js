@@ -21,3 +21,19 @@ function updatePage() {
     const offset = -currentPage * 100; // Negative offset for upward scroll
     container.style.transform = `translateY(${offset}vh)`;
 }
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        const progressBar = card.querySelector('.progress-bar');
+        progressBar.style.width = '75%'; // Set to the desired width
+    });
+
+    card.addEventListener('mouseleave', () => {
+        const progressBar = card.querySelector('.progress-bar');
+        progressBar.style.width = '0%'; // Reset to zero width
+    });
+});
+
+

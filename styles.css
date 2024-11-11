@@ -50,9 +50,7 @@ div#section-3{
     justify-content: center;
     width: fit-content;
     padding: 0.8rem 2.5rem;
-    margin: 2rem auto;
-    margin-bottom: 1.5rem;
-    background-color: #e0e0e0;
+    margin: 2rem auto 1.5rem;
     border-radius: 1.3rem;
 }
 
@@ -182,43 +180,19 @@ div#right-section .button-container {
     cursor: pointer;
     font-size: 0.8rem;
     border-radius: 5rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
-.button-container .button:nth-child(2) {
-    color: #e0e0e0;
-    background-color: #0b0c0e;
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffa600;
 }
-    .button:after {
-        width: 0%;
-        height: 100%;
-        position: absolute;
-        transition: all 0.4s ease-in-out;
-    }
 
-    .button:hover::after {
-        right: auto;
-        width: 100%;
-        color: #007bff;
-    }
-    button:hover span {
-        animation: scaleUp 0.3s ease-in-out;
-    }
-    @keyframes scaleUp {
-        0% {
-        transform: scale(1);
-        }
-        50% {
-        transform: scale(0.95);
-        }
-    
-        100% {
-        transform: scale(1);
-        }
-    }
-
-    div#right-section .button:hover {
-        background-color: #ffa600;
-    }
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 section#Social-container{
     display: flex;
@@ -243,6 +217,7 @@ section#Social-container{
     min-height: 120px;
     overflow: visible;
     padding: 0.2rem;
+    margin-top: 3.5rem;
 }
 /* Gradient Border Animation */
 #profile-card::before {
@@ -309,14 +284,11 @@ section#Social-container{
     box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
     position: relative;
     text-align: center;
-    background-color: #e0e0e0;
-    border-radius: 10px;
     display: flex;
     overflow: hidden;
     width: 15rem;
     height: 4rem;
-    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease; /* Added box-shadow transition */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
 }
 
 .card:hover {

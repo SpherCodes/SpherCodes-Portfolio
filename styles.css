@@ -7,8 +7,9 @@
 
 /* Body Styling */
 body {
-    background-color: #e0e0e0;
+    background-color: white;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Main Content and Page Layout */
@@ -20,18 +21,21 @@ body {
     overflow: hidden;
 }
 div#Section-1{
-    background-color: #e0e0e0;
+    background-color: white;
     height: 95vh;
     width: 100vw;
 }
 div#Section-2{
-    background-color: #fbfbfb;
+    background-color: white;
+    min-height: fit-content;
     height: 100vh;
+    margin: 0 12rem;
 }
 div#section-3{
-    background-color: #121212;
     color: #bebebe;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .page {
@@ -210,7 +214,7 @@ section#Social-container{
 #profile-card {
     position: relative;
     border-radius: 50%;
-    height: 30vw;
+    height: 35vw;
     max-width: 400px;
     max-height: 400px;
     min-width: 120px;
@@ -243,16 +247,6 @@ section#Social-container{
         transform: rotate(360deg);
     }
 }
-
-.card::after {
-    content: '';
-    position: absolute;
-    background: #07182E;
-    ;
-    inset: 5px;
-    border-radius: 15px;
-}
-
 /* Profile Image */
 #profile-image {
     border-radius: 50%;
@@ -279,15 +273,15 @@ section#Social-container{
 /* About Me section */
 /* Cards */
 .card {
-    border-radius: 50px;
+    border-radius: 10px;
+    gap: 5rem;
     background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
     position: relative;
     text-align: center;
     display: flex;
     overflow: hidden;
-    width: 15rem;
-    height: 4rem;
+    width: 18rem;
+    height: 4.5rem;
     transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
 }
 
@@ -317,7 +311,7 @@ section#Social-container{
 div.progress-bar {
     position: absolute;
     height: 100%;
-    background-color: #9e6940;
+    background-color: #92ff77;
     transition: width 1s ease-in-out; 
 }
 
@@ -339,6 +333,38 @@ div.progress-bar {
     opacity: 0; /* Hide the language name on hover */
     z-index: 1;
 }
+section#AboutMe-Terminal{
+    background-color:black;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom:2rem ;
+}
+section#AboutMe-Terminal p {
+    padding-bottom: 1rem;
+}
+div#icon-container{
+    padding-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    text-align: end;
+}
+#Redicon, #Yellowicon, #greenicon {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+}
+#Redicon {
+    background-color: red; /* Red color for the red icon */
+}
+
+#Yellowicon {
+    background-color: yellow; /* Yellow color for the yellow icon */
+}
+
+#greenicon {
+    background-color: green; /* Green color for the green icon */
+}
 
 section#languages {
     display: flex;
@@ -346,31 +372,155 @@ section#languages {
     flex-wrap: wrap;
     margin-left: 10%;
 }
+ div#Section-2 h1{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+ }
+.bash{
+    color: green;
+    padding-right: 1rem;
+}
+#section-3 h2{
+    text-align: center;
+    padding: 1rem;
+}
+#section-3 h1{
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+}
+/* Container */
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-section#AboutMe {
+/* Project Card */
+.project-card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card Front */
+.project-card-front {
+    position: relative;
+}
+.project-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effect on Front */
+.project-card-front:hover img {
+    opacity: 0.5;
+}
+
+/* Project Title */
+.project-card h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    text-align: center;
+    background-clip: text;
+    color: white;
+}
+
+/* Description Overlay */
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #fbfbfb;
-    margin: auto;
-    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateY(95%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-card:hover .project-description {
+    transform: translateY(0);
+}
+.project-link-button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    display: inline-flex;
+    align-items: center; /* Align icon and text */
+    gap: 0.5rem; /* Space between icon and text */
+    letter-spacing: 0.05rem;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #66ff66;
+    color: ghostwhite;
+    transition: color 0.4s;
 }
 
-section#AboutMe h1 {
-    padding-top: 1rem;
-    color: #181616;
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    align-self: center;
-}
-
-section#AboutMe h2 {
-    font-size: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-section#AboutMe p {
+/* Style for the icon */
+.project-link-button ion-icon {
     font-size: 1.2rem;
-    color: #666;
-    padding-bottom: 2.3rem;
+    color: inherit; /* Inherit the button's color */
 }
 
+/* Text styling */
+.project-link-button span {
+    position: relative;
+    z-index: 10;
+    color: ghostwhite;
+    transition: color 0.4s;
+}
+
+/* Change text color on hover */
+.project-link-button:hover span {
+    color: black;
+}
+
+/* Pseudo-elements for animated background effect */
+.project-link-button::before,
+.project-link-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.project-link-button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+/* Background slide effect on hover */
+.project-link-button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}

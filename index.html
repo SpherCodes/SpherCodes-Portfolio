@@ -8,190 +8,184 @@
     <title>Sphe-Dev</title>
 </head>
 <body>
-    <div id="Section-1"> 
-        <!-- Navigation Section -->
-        <section id="Navigation">
-            <nav>
-                <ul>
-                    <li><a href="/index.html" style="color: #CE8147;"><ion-icon name="home-outline"></ion-icon><span> Home</span></a></li>
-                    <li><a href="#projects"><ion-icon name="folder-open-outline"></ion-icon><span> Projects</span></a></li>
-                    <li><a href="#skills"><ion-icon name="hammer-outline"></ion-icon><span> Skills</span></a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!-- Main Content Section -->
-        <section id="main-content" class="page">
-            <div id="left-section">
-                <section id="profile-card">
-                    <img src="/lib/images/Profile-picture.jpg" alt="Profile Picture" id="profile-image">
-                </section>
-            </div>        
-
-            <div id="right-section">
-                <p>Hello, I am</p>
-                <h1>Siphesihle Mvelase</h1>
-                <h2>Software<span> Developer</span></h2>
-                <!-- <p>
-                    I am passionate about using code to solve real-world problems and bring creative ideas to life. 
-                    Whether it's developing efficient solutions or building innovative applications, I enjoy creating projects that have a meaningful impact.
-                </p> -->
-                
-                <section class="button-container">
-                    <button type="button" class="button">Download CV</button>
-                    <button type="button" class="button" onclick="window.location.href='mailto:2021335696@ufs4life.ac.za'">Contact Me</button>
-                </section>
-
-                <section id="Social-container">
-                    <a href="https://github.com/spher04" ><ion-icon name="logo-github"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/siphesihle-mvelase-4077341b6/" ><ion-icon name="logo-linkedin"></ion-icon></a>
-                </section>
-            </div>
-        </section>
+    <div class="container">
+        <div class="Section"> 
+            <!-- Navigation Section -->
+            <section id="Navigation">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html" style="color: #CE8147;"><ion-icon name="home-outline"></ion-icon><span> Home</span></a></li>
+                        <li><a href="#projects"><ion-icon name="folder-open-outline"></ion-icon><span> Projects</span></a></li>
+                        <li><a href="#skills"><ion-icon name="hammer-outline"></ion-icon><span> Skills</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+    
+            <!-- Main Content Section -->
+            <section id="main-content" class="page">
+                <div id="left-section">
+                    <section id="profile-card">
+                        <img src="/lib/images/Profile-picture.jpg" alt="Profile Picture" id="profile-image">
+                    </section>
+                </div>        
+    
+                <div id="right-section">
+                    <p>Hello, I am</p>
+                    <h1>Siphesihle Mvelase</h1>
+                    <h2>Software<span> Developer</span></h2>
+                    
+                    <section class="button-container">
+                        <button type="button" class="button">Download CV</button>
+                        <button type="button" class="button" onclick="window.location.href='mailto:2021335696@ufs4life.ac.za'">Contact Me</button>
+                    </section>
+    
+                    <section id="Social-container">
+                        <a href="https://github.com/spher04" ><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/siphesihle-mvelase-4077341b6/" ><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div class="Section">
+            <h1>About Me</h1>
+            <section id="AboutMe-Terminal">
+                <div id="icon-container">
+                    <div id="Redicon"></div>
+                    <div id="Yellowicon"></div>
+                    <div id="greenicon"></div>
+                    <p>bash</p>
+                    
+                </div>
+                <div class="typing-animation">
+                    <p><i class="bash" id="command">$</i></p>
+                    <p id="Response">
+                    </p>
+                    <p class="bash">$ </p>
+                </div>
+    
+            </section>
+            <section id="languages">
+                <article class="card">
+                    <img src="/lib/images/Csharp_Logo.png" alt="C# Logo" class="logo">
+                    <p class="language-name">C#</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 80%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/javascript.svg" alt="JavaScript Logo" class="logo">
+                    <p class="language-name">JavaScript</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 70%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/python.svg" alt="Python Logo" class="logo">
+                    <p class="language-name">Python</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 90%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/bash.svg" alt="Bash Script Logo" class="logo">
+                    <p class="language-name">Bash Script</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 60%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/html5.svg" alt="HTML 5 Logo" class="logo">
+                    <p class="language-name">HTML 5</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 85%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/css3.svg" alt="CSS Logo" class="logo">
+                    <p class="language-name">CSS</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 75%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/bootstrap.svg" alt="Bootstrap Logo" class="logo">
+                    <p class="language-name">Bootstrap</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 80%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/nodejs.svg" alt="Node JS Logo" class="logo">
+                    <p class="language-name">Node JS</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 70%;"></div> 
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/lib/images/microsoft-sql-server.svg" alt="SQL Server Logo" class="logo">
+                    <p class="language-name">SQL Server</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 65%;"></div> 
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="Section">
+            <h1>Projects</h1>
+            <h2>Browse through my projects</h2>
+            <section id="project-container">
+                <article class="project-card">
+                    <section class="project-card-front">
+                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                    </section>
+                    <section class="project-description">
+                        <h3>Sink Hero</h3>
+                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
+                        <button class="project-link-button"> 
+                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
+                        </button>
+                    </section>
+                </article>
+                <article class="project-card">
+                    <section class="project-card-front">
+                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                    </section>
+                    <section class="project-description">
+                        <h3>Sink Hero</h3>
+                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
+                        <button class="project-link-button"> 
+                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
+                        </button>
+                    </section>
+                </article>
+                <article class="project-card">
+                    <section class="project-card-front">
+                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                    </section>
+                    <section class="project-description">
+                        <h3>Sink Hero</h3>
+                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
+                        <button class="project-link-button"> 
+                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
+                        </button>
+                    </section>
+                </article>
+                <article class="project-card">
+                    <section class="project-card-front">
+                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                    </section>
+                    <section class="project-description">
+                        <h3>Sink Hero</h3>
+                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
+                        <button class="project-link-button"> 
+                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
+                        </button>
+                    </section>
+                </article>
+            </section>        
+        </div>
+    
     </div>
-    <div id="Section-2">
-        <h1>About Me</h1>
-        <!-- <section class="page" id="AboutMe"> -->
-        <section id="AboutMe-Terminal">
-            <div id="icon-container">
-                <div id="Redicon"></div>
-                <div id="Yellowicon"></div>
-                <div id="greenicon"></div>
-                <p>bash</p>
-                
-            </div>
-            
-            <p><i class="bash">$</i>echo "About Me"</p>
-            <p>I am currently completing my degree in Computer Science and Business Management, 
-                where I've built a strong foundation in programming, problem-solving, and analytical thinking.
-                My journey in tech is fueled by a passion for creating innovative applications that make a meaningful impact.
-                Whether I’m exploring new technologies or refining existing skills, 
-                I’m motivated by the endless possibilities in software development and am always excited to take on new challenges.
-            </p>
-            <p class="bash">$ </p>
-
-        </section>
-        <section id="languages">
-            <article class="card">
-                <img src="/lib/images/Csharp_Logo.png" alt="C# Logo" class="logo">
-                <p class="language-name">C#</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 80%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/javascript.svg" alt="JavaScript Logo" class="logo">
-                <p class="language-name">JavaScript</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 70%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/python.svg" alt="Python Logo" class="logo">
-                <p class="language-name">Python</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 90%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/bash.svg" alt="Bash Script Logo" class="logo">
-                <p class="language-name">Bash Script</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 60%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/html5.svg" alt="HTML 5 Logo" class="logo">
-                <p class="language-name">HTML 5</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 85%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/css3.svg" alt="CSS Logo" class="logo">
-                <p class="language-name">CSS</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 75%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/bootstrap.svg" alt="Bootstrap Logo" class="logo">
-                <p class="language-name">Bootstrap</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 80%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/nodejs.svg" alt="Node JS Logo" class="logo">
-                <p class="language-name">Node JS</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 70%;"></div> 
-                </div>
-            </article>
-            <article class="card">
-                <img src="/lib/images/microsoft-sql-server.svg" alt="SQL Server Logo" class="logo">
-                <p class="language-name">SQL Server</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 65%;"></div> 
-                </div>
-            </article>
-        </section>
-    </div>
-    <div id="section-3">
-        <h1>Projects</h1>
-        <h2>Browse through my projects</h2>
-        <section id="project-container">
-            <article class="project-card">
-                <section class="project-card-front">
-                    <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                </section>
-                <section class="project-description">
-                    <h3>Sink Hero</h3>
-                    <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                    <button class="project-link-button"> 
-                        <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                    </button>
-                </section>
-            </article>
-            <article class="project-card">
-                <section class="project-card-front">
-                    <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                </section>
-                <section class="project-description">
-                    <h3>Sink Hero</h3>
-                    <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                    <button class="project-link-button"> 
-                        <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                    </button>
-                </section>
-            </article>
-            <article class="project-card">
-                <section class="project-card-front">
-                    <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                </section>
-                <section class="project-description">
-                    <h3>Sink Hero</h3>
-                    <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                    <button class="project-link-button"> 
-                        <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                    </button>
-                </section>
-            </article>
-            <article class="project-card">
-                <section class="project-card-front">
-                    <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                </section>
-                <section class="project-description">
-                    <h3>Sink Hero</h3>
-                    <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                    <button class="project-link-button"> 
-                        <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                    </button>
-                </section>
-            </article>
-        </section>        
-    </div>
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -4,14 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* Body Styling */
 body {
     background-color: white;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
-
+.container{
+    position: relative;
+}s
 /* Main Content and Page Layout */
 #main-content {
     position: relative;
@@ -20,24 +24,31 @@ body {
     transition: transform 0.5s ease;
     overflow: hidden;
 }
-div#Section-1{
+.Section{
+    position: relative;
+    transition: all 0.8s ease-in-out;
+    opacity: 0;
     background-color: white;
-    height: 95vh;
-    width: 100vw;
-}
-div#Section-2{
-    background-color: white;
-    min-height: fit-content;
+    width: 85vw;
     height: 100vh;
-    margin: 0 12rem;
+    margin: 0 auto;
+    padding-top: 1rem ;
 }
-div#section-3{
-    color: #bebebe;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
+    .Section.active{
+        opacity: 1;
+    }
+    .Section h2{
+        text-align: center;
+        padding-bottom: 1.5rem;
+        color: #666;
+    }
+    .Section h1{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        color: black;
+        font-size: 2.5rem;
+        text-align: center;
+    }
 .page {
     display: flex;
     max-width: 70vw;
@@ -48,15 +59,28 @@ div#section-3{
 
 /* Navigation Bar */
 #Navigation {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-120%);
+    opacity: 0;
+    z-index: 100;
+    transition: transform 0.8s ease-in-out, opacity 0.7s ease-in-out;
     background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     display: flex;
     justify-content: center;
-    width: fit-content;
-    padding: 0.8rem 2.5rem;
+    width: 21rem;
+    height: 3.5rem;
+    padding: 0.5rem 2.5rem;
     margin: 2rem auto 1.5rem;
     border-radius: 1.3rem;
 }
+
+#Navigation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 nav ul {
     display: flex;
@@ -66,6 +90,7 @@ nav ul {
 
 nav ul a {
     text-decoration: none;
+    position: relative;
     color: #001f3f;
     font-size: 20px;
     display: flex;
@@ -84,7 +109,7 @@ nav ul a span {
     top: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
@@ -95,12 +120,13 @@ nav ul a:hover span {
 }
 
 ion-icon {
+    padding-top: 0.5rem;
     font-size: 1.5rem;
     transition: transform 0.3s ease;
 }
 
 nav ul a:hover ion-icon {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 }
 
 /* Left and Right Sections */
@@ -145,6 +171,17 @@ h1#job-title {
     animation: typing-erasing 5s steps(30, end) infinite;
 }
 
+.typing-animation{
+    width: fit-content;
+}
+.typing-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background: #00ff00;
+    margin-left: 2px;
+    animation: blink 0.6s step-start infinite;
+}
 @keyframes typing {
     from { width: 0; }
     to { width: 75%; }
@@ -274,20 +311,26 @@ section#Social-container{
 /* Cards */
 .card {
     border-radius: 10px;
-    gap: 5rem;
     background: #e0e0e0;
     position: relative;
     text-align: center;
     display: flex;
     overflow: hidden;
-    width: 18rem;
+    width: 15rem;
     height: 4.5rem;
     transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
 }
 
+section#languages {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
+
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .progress-container {
@@ -325,23 +368,27 @@ div.progress-bar {
 
 .card p {
     padding-left: 1.5rem;
-    padding-top: 1rem;
-    transition: opacity 0.3s ease; /* Transition for the language name */
+    margin: auto 0;
+    transition: opacity 0.3s ease;
 }
 
 .card:hover .language-name {
-    opacity: 0; /* Hide the language name on hover */
+    opacity: 0;
     z-index: 1;
 }
 section#AboutMe-Terminal{
+    width: 90%;
+    margin: auto;
     background-color:black;
     color: white;
     border-radius: 0.5rem;
     padding: 1.5rem;
     margin-bottom:2rem ;
 }
+
 section#AboutMe-Terminal p {
     padding-bottom: 1rem;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 div#icon-container{
     padding-bottom: 1.5rem;
@@ -349,6 +396,9 @@ div#icon-container{
     gap: 0.5rem;
     text-align: end;
 }
+    div#icon-container p{
+        margin-left: auto;
+    }
 #Redicon, #Yellowicon, #greenicon {
     width: 20px; 
     height: 20px; 
@@ -366,30 +416,11 @@ div#icon-container{
     background-color: green; /* Green color for the green icon */
 }
 
-section#languages {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-left: 10%;
-}
- div#Section-2 h1{
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 2rem;
- }
 .bash{
-    color: green;
+    color: #4ade80;
     padding-right: 1rem;
 }
-#section-3 h2{
-    text-align: center;
-    padding: 1rem;
-}
-#section-3 h1{
-    color: black;
-    font-size: 2.5rem;
-    text-align: center;
-}
+
 /* Container */
 #project-container {
     display: flex;
@@ -424,16 +455,6 @@ section#languages {
 /* Hover Effect on Front */
 .project-card-front:hover img {
     opacity: 0.5;
-}
-
-/* Project Title */
-.project-card h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 10px 0;
-    text-align: center;
-    background-clip: text;
-    color: white;
 }
 
 /* Description Overlay */

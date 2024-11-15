@@ -1,0 +1,526 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Content and Page Layout */
+#main-content {
+    position: relative;
+    height: auto;
+    margin: auto;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+div#Section-1{
+    background-color: white;
+    height: 95vh;
+    width: 100vw;
+}
+div#Section-2{
+    background-color: white;
+    min-height: fit-content;
+    height: 100vh;
+    margin: 0 12rem;
+}
+div#section-3{
+    color: #bebebe;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    max-width: 70vw;
+    height: 100vh;
+    font-size: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Navigation Bar */
+#Navigation {
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.8rem 2.5rem;
+    margin: 2rem auto 1.5rem;
+    border-radius: 1.3rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4vw;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #001f3f;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover,
+nav ul a:active {
+    color: #CE8147;
+}
+
+nav ul a span {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+nav ul a:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+ion-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+nav ul a:hover ion-icon {
+    transform: translateY(-5px);
+}
+
+/* Left and Right Sections */
+#left-section,
+#right-section {
+    flex: 1;
+    height: 80vh;
+}
+
+#left-section {
+    padding: 1rem;
+    width: fit-content;
+}
+
+#right-section {
+    padding:2rem;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#right-section p {
+    margin-top: 6rem;
+    text-align: center;
+}
+#right-section h1 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #121212;
+}
+#right-section h2{
+    font-size: 1.8rem;
+    color: #666;
+    text-align: center;
+}
+
+h1#job-title {
+    color: #001f3f;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid rgba(66, 66, 66, 0.75);
+    animation: typing-erasing 5s steps(30, end) infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 75%; }
+}
+
+@keyframes erasing {
+    from { width: 75%; }
+    to { width: 0; }
+}
+
+@keyframes blink-cursor {
+    from { border-right-color: rgba(59, 59, 59, 0.75); }
+    to { border-right-color: transparent; }
+}
+
+#right-section p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Buttons */
+div#right-section .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.button {
+    position: relative;
+    width: 10rem;
+    height: 2.5rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffa600;
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+section#Social-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 4rem;
+}
+#Social-container ion-icon {
+    font-size: 2rem;
+    color: #001f3f;
+    cursor: pointer;
+}
+/* Profile Card Styling */
+#profile-card {
+    position: relative;
+    border-radius: 50%;
+    height: 35vw;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 120px;
+    min-height: 120px;
+    overflow: visible;
+    padding: 0.2rem;
+    margin-top: 3.5rem;
+}
+/* Gradient Border Animation */
+#profile-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    padding: 5px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 3s linear infinite;
+    z-index: 1;
+}
+
+/* Rotation Animation for the Border */
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Profile Image */
+#profile-image {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+#left-section h1 {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin: 1rem 0 4rem;
+}
+
+#left-section p {
+    font-size: 1rem;
+    color: #e4e3e3;
+    margin-bottom: 1.6rem;
+}
+
+
+/* About Me section */
+/* Cards */
+.card {
+    border-radius: 10px;
+    gap: 5rem;
+    background: #e0e0e0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    width: 18rem;
+    height: 4.5rem;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.progress-container {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    width: 0;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 1.3rem;
+    overflow: hidden;
+    margin: auto;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+.card:hover .progress-container {
+    width: 70%;
+    opacity: 1;
+}
+
+div.progress-bar {
+    position: absolute;
+    height: 100%;
+    background-color: #92ff77;
+    transition: width 1s ease-in-out; 
+}
+
+.card img {
+    margin: auto 0;
+    max-width: auto;
+    max-height: 60%;
+    align-items: end;
+    padding-left: 1rem;
+}
+
+.card p {
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    transition: opacity 0.3s ease; /* Transition for the language name */
+}
+
+.card:hover .language-name {
+    opacity: 0; /* Hide the language name on hover */
+    z-index: 1;
+}
+section#AboutMe-Terminal{
+    background-color:black;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom:2rem ;
+}
+section#AboutMe-Terminal p {
+    padding-bottom: 1rem;
+}
+div#icon-container{
+    padding-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    text-align: end;
+}
+#Redicon, #Yellowicon, #greenicon {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+}
+#Redicon {
+    background-color: red; /* Red color for the red icon */
+}
+
+#Yellowicon {
+    background-color: yellow; /* Yellow color for the yellow icon */
+}
+
+#greenicon {
+    background-color: green; /* Green color for the green icon */
+}
+
+section#languages {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
+ div#Section-2 h1{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+ }
+.bash{
+    color: green;
+    padding-right: 1rem;
+}
+#section-3 h2{
+    text-align: center;
+    padding: 1rem;
+}
+#section-3 h1{
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+}
+/* Container */
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Project Card */
+.project-card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card Front */
+.project-card-front {
+    position: relative;
+}
+.project-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effect on Front */
+.project-card-front:hover img {
+    opacity: 0.5;
+}
+
+/* Project Title */
+.project-card h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    text-align: center;
+    background-clip: text;
+    color: white;
+}
+
+/* Description Overlay */
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateY(95%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-card:hover .project-description {
+    transform: translateY(0);
+}
+.project-link-button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    display: inline-flex;
+    align-items: center; /* Align icon and text */
+    gap: 0.5rem; /* Space between icon and text */
+    letter-spacing: 0.05rem;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #66ff66;
+    color: ghostwhite;
+    transition: color 0.4s;
+}
+
+/* Style for the icon */
+.project-link-button ion-icon {
+    font-size: 1.2rem;
+    color: inherit; /* Inherit the button's color */
+}
+
+/* Text styling */
+.project-link-button span {
+    position: relative;
+    z-index: 10;
+    color: ghostwhite;
+    transition: color 0.4s;
+}
+
+/* Change text color on hover */
+.project-link-button:hover span {
+    color: black;
+}
+
+/* Pseudo-elements for animated background effect */
+.project-link-button::before,
+.project-link-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.project-link-button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+/* Background slide effect on hover */
+.project-link-button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}

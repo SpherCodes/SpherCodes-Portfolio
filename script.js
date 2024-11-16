@@ -31,8 +31,21 @@ function typeAboutMe() {
 
 typeCommand();
 //Languages Level animation Logic
+document.addEventListener('DOMContentLoaded',() => {
+    const  progressBars = document.querySelectorAll('.progress-bar')
 
+    progressBars.forEach(progressBar => {
+        const percentage = progressBar.getAttribute('data-percentage');
+
+        progressBar.style.width = `${percentage}%`
+
+        const percentageSpan = progressBar.nextElementSibling; 
+        percentageSpan.textContent = `${percentage}%`;
+    })
+})
 //Scrolling logic
+
+const NavElements = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.Section');
 const navMenu = document.getElementById('Navigation');
 
@@ -40,10 +53,19 @@ let currentSection = 0;
 let isScrolling = false;
 
 window.addEventListener('load', () => {
-    const navMenu = document.getElementById('Navigation');
-    showNavigation(navMenu)
-    // Add the active class on page load
+    showNavigation(navMenu);
+
+    NavElements.forEach(navElement,index => {
+        console.log(navElement)
+        navElement.addEventListener('click', (event) => {
+            console.log('Clicked:', event.target);
+            NavElements.forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+            showSection(index)
+        });
+    });
 });
+
 function showNavigation(navMenu){
     if(currentSection == 0){
         navMenu.classList.add('active');

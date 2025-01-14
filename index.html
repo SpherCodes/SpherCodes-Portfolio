@@ -5,27 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="module" src="script.js"></script>
-    <title>Sphe-Dev</title>
+    <title>SpherCodes</title>
 </head>
 <body>
     <div class="container">
         <div class="Section"> 
             <!-- Navigation Section -->
-            <div class="Navigation-conatiner ">
-                <section id="Navigation" id="glow-nav">
+            <div class="Navigation-container">
+                <section id="Navigation">
                     <nav>
                         <ul>
-                            <li><a href="#section-1"><ion-icon name="home-outline" class="active nav-link"></ion-icon><span> Home</span></a></li>
-                            <li><a href="#section-3"><ion-icon name="folder-open-outline" class="nav-link"></ion-icon><span> Projects</span></a></li>
-                            <li><a href="#section-2"><ion-icon name="hammer-outline" class="nav-link"></ion-icon><span> Skills</span></a></li>
+                            <li>
+                                <a href="#section-1">
+                                    <ion-icon name="home-outline" class="active nav-link"></ion-icon>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section-2">
+                                    <ion-icon name="hammer-outline" class="nav-link"></ion-icon>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section-3">
+                                    <ion-icon name="folder-open-outline" class="nav-link"></ion-icon>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </section>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="theme-toggle">
                     <span class="slider"></span>
                 </label>
-            </div>
+            </div>            
     
             <!-- Main Content Section -->
             <section id="main-content" class="page">
@@ -41,13 +56,14 @@
                     <h2>Software<span> Developer</span></h2>
                     
                     <section class="button-container">
-                        <button type="button" class="button">Download CV</button>
-                        <button type="button" class="button" onclick="window.location.href='mailto:2021335696@ufs4life.ac.za'">Contact Me</button>
+                        <a  class="button" href="lib/docs/resume.pdf">
+                            Download CV
+                        </a>
+                        <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">Contact Me</button>
                     </section>
-    
                     <section id="Social-container">
-                        <a href="https://github.com/spher04" ><ion-icon name="logo-github"></ion-icon></a>
-                        <a href="https://www.linkedin.com/in/siphesihle-mvelase-4077341b6/" ><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="https://github.com/sphercodes" ><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="www.linkedin.com/in/sphercodes" ><ion-icon name="logo-linkedin"></ion-icon></a>
                     </section>
                 </div>
             </section>
@@ -63,14 +79,16 @@
                     
                 </div>
                 <div class="typing-animation">
-                    <p><i class="bash" id="command">$</i></p>
+                    <p><i class="bash" id="command">$ </i></p>
                     <p id="Response">
                     </p>
                     <p class="bash">$ </p>
                 </div>
     
             </section>
+        
             <section id="languages">
+                <h2>Technologies and languages i use</h2>
                 <article class="card">
                     <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="logo">
                     <p class="language-name">C#</p>
@@ -156,9 +174,9 @@
                     <section class="project-description">
                         <h3>Sink Hero</h3>
                         <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                        <button class="project-link-button"> 
-                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                        </button>
+                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
+                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
+                            </a>
                     </section>
                 </article>
                 <article class="project-card">
@@ -168,9 +186,9 @@
                     <section class="project-description">
                         <h3>Sink Hero</h3>
                         <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                        <button class="project-link-button"> 
-                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                        </button>
+                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
+                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
+                            </a>
                     </section>
                 </article>
                 <article class="project-card">
@@ -180,9 +198,9 @@
                     <section class="project-description">
                         <h3>Sink Hero</h3>
                         <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                        <button class="project-link-button"> 
-                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                        </button>
+                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
+                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
+                            </a>
                     </section>
                 </article>
                 <article class="project-card">
@@ -192,9 +210,9 @@
                     <section class="project-description">
                         <h3>Sink Hero</h3>
                         <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                        <button class="project-link-button"> 
-                            <ion-icon name="logo-github"></ion-icon><span> </ion-icon>Open</span>
-                        </button>
+                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
+                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
+                            </a>
                     </section>
                 </article>
             </section>        

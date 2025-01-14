@@ -1,5 +1,7 @@
-:root {
-    --glow-color: #4caf50; /* Example: Neon green */
+
+:root{
+    --bg--color: #050404;
+    --text--color:#d9cece;
 }
 
 /* Reset */
@@ -13,18 +15,22 @@ html {
 }
 /* Body Styling */
 body {
-    background-color: white;
+    background-color: var(--bg--color);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 .container{
+    max-width: 100%;
+    padding: 1rem;
     position: relative;
+    contain: layout inline-size;
 }
 /* Main Content and Page Layout */
 #main-content {
+    display: flex;
+    width: 100vw;
     position: relative;
     height: auto;
-    margin: auto;
     transition: transform 0.5s ease;
     overflow: hidden;
 }
@@ -33,8 +39,8 @@ body {
     transition: all 0.8s ease-in-out;
     opacity: 0;
     background-color: white;
-    width: 85vw;
-    height: 100vh;
+    padding: 5rem;
+    min-height: 100vh;
     margin: 0 auto;
     padding-top: 1rem ;
 }
@@ -43,11 +49,10 @@ body {
     }
     .Section h2{
         text-align: center;
-        padding-bottom: 1.5rem;
         color: #666;
     }
     .Section h1{
-        padding-top: 2rem;
+        padding-top: 0.5rem;
         padding-bottom: 1rem;
         color: black;
         font-size: 2.5rem;
@@ -61,11 +66,7 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Navigation Bar */
-.Navigation-conatiner{
-    display: flex;
-    flex-direction: row;
-}
+
 .switch {
     margin: auto 0;
     font-size: 15px;
@@ -106,9 +107,34 @@ body {
     border-radius: 50px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-#Navigation {
+
+/* Navigation Bar */
+.Navigation-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    transition: transform 0.3s ease;
+}
+
+/*******Hide Navigation on small screens**********/
+@media screen and (max-width: 768px) {
+    .Navigation-container #Navigation {
+        width: 70%;
+    }
+    .Navigation-container.active {
+        transform: translateX(0);
+    }
+    .Navigation-container nav ul {
+        gap: 2em;
+    }
+}
+
+.Navigation-container nav ul li{
     position: relative;
-    overflow: hidden;
+    display: inline-block;
+}
+#Navigation {
     transform: translateY(-120%);
     opacity: 0;
     z-index: 100;
@@ -117,7 +143,7 @@ body {
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     display: flex;
     justify-content: center;
-    width: 21rem;
+    width: 21vw;
     height: 3.5rem;
     padding: 0.5rem 2.5rem;
     margin: 2rem auto 1.5rem;
@@ -136,7 +162,7 @@ nav ul {
     gap: 4vw;
 }
 
-nav ul a {
+.Navigation-container nav ul a {
     text-decoration: none;
     position: relative;
     color: #001f3f;
@@ -147,26 +173,22 @@ nav ul a {
     transition: color 0.3s ease;
 }
 
-nav ul a:hover,
-nav ul a:active {
-    color: #0974f1;
-}
 .active{
     color: #0974f1;
 }
 
-nav ul a span {
+.Navigation-container nav ul a span {
+    display: block;
     position: absolute;
     top: 100%;
     opacity: 0;
-    visibility: hidden;
+    z-index: 10;
     transform: translateY(-15px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 nav ul a:hover span {
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
 }
 
@@ -177,7 +199,7 @@ ion-icon {
 }
 
 nav ul a:hover ion-icon {
-    transform: translateY(-7px);
+    transform: translateY(-10px);
 }
 #Navigation > #glow-nav {
     box-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);
@@ -193,16 +215,29 @@ nav ul a:hover ion-icon {
 #left-section {
     padding: 1rem;
     width: fit-content;
+    transform: translateY(20rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s ease-in-out, opacity 0.7s ease-in-out;
 }
 
+#left-section.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 #right-section {
     padding:2rem;
-    width: 100vw;
+    width: fit-content;
     overflow: hidden;
 }
-
+#right-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 #right-section p {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
+    margin-bottom: 0;
     text-align: center;
 }
 #right-section h1 {
@@ -267,6 +302,8 @@ div#right-section .button-container {
 }
 
 .button {
+    white-space: nowrap;
+    padding: 1rem;
     position: relative;
     width: 10rem;
     height: 2.5rem;
@@ -275,8 +312,27 @@ div#right-section .button-container {
     cursor: pointer;
     font-size: 0.8rem;
     border-radius: 5rem;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
+
+.button:hover {
+    background-color: #000;
+    color: white; 
+}
+
+.button a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+}
+
 
 .button:hover {
     transform: translateY(-3px);
@@ -310,9 +366,20 @@ section#Social-container{
     max-height: 400px;
     min-width: 120px;
     min-height: 120px;
-    overflow: visible;
+    overflow: hidden;
     padding: 0.2rem;
     margin-top: 3.5rem;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* Keyframes for Floating Effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-20px); /* Midway position */
+    }
 }
 /* Gradient Border Animation */
 #profile-card::before {
@@ -327,6 +394,7 @@ section#Social-container{
     background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
     animation: rotBGimg 3s linear infinite;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 /* Rotation Animation for the Border */
@@ -363,6 +431,9 @@ section#Social-container{
 
 /* About Me section */
 /* Cards */
+section#languages h2{
+    width: 100%;
+}
 .card {
     border-radius: 10px;
     background: #e0e0e0;
@@ -370,7 +441,7 @@ section#Social-container{
     text-align: center;
     display: flex;
     overflow: hidden;
-    width: 15rem;
+    width: 20%;
     height: 4.5rem;
     transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
 }
@@ -380,7 +451,8 @@ section#languages {
     color: #000;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-left: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {
@@ -441,7 +513,7 @@ div.progress-bar {
     opacity: 0;
     z-index: 1;
 }
-section#AboutMe-Terminal{
+#AboutMe-Terminal{
     width: 90%;
     margin: auto;
     background-color:black;
@@ -451,7 +523,7 @@ section#AboutMe-Terminal{
     margin-bottom:2rem ;
 }
 
-section#AboutMe-Terminal p {
+#AboutMe-Terminal p {
     padding-bottom: 1rem;
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -494,15 +566,17 @@ div#icon-container{
     justify-content: center;
 }
 
-/* Project Card */
+/* General Project Card Styling */
 .project-card {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     border-radius: 8px;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin: 1rem auto;
 }
 
 /* Project Card Front */
@@ -513,11 +587,11 @@ div#icon-container{
     width: 100%;
     height: 70%;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 8px 8px 0 0;
     transition: opacity 0.3s ease;
 }
 
-/* Hover Effect on Front */
+/* Hover Effect on Front Image */
 .project-card-front:hover img {
     opacity: 0.5;
 }
@@ -536,77 +610,151 @@ div#icon-container{
     text-align: center;
     gap: 10px;
     background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-    color: #e8e8e8;
+    color: #fff;
     padding: 20px;
     line-height: 1.5;
-    border-radius: 5px;
-    pointer-events: none;
-    transform: translateY(95%);
+    border-radius: 8px;
+    pointer-events: auto;
+    transform: translateY(100%);
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .project-card:hover .project-description {
     transform: translateY(0);
 }
-.project-link-button {
-    cursor: pointer;
-    outline: none;
+
+/* Button Styling */
+.project-description .button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.8rem 1.5rem;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
     border: none;
-    padding: 0.9rem 2rem;
-    font-family: inherit;
-    font-size: 17px;
-    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
     position: relative;
-    display: inline-flex;
-    align-items: center; /* Align icon and text */
-    gap: 0.5rem; /* Space between icon and text */
-    letter-spacing: 0.05rem;
-    border-radius: 500px;
     overflow: hidden;
-    background: #66ff66;
-    color: ghostwhite;
-    transition: color 0.4s;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Style for the icon */
-.project-link-button ion-icon {
+/* Button Icon Styling */
+.project-description .button ion-icon {
     font-size: 1.2rem;
-    color: inherit; /* Inherit the button's color */
+    color: inherit;
 }
 
-/* Text styling */
-.project-link-button span {
-    position: relative;
-    z-index: 10;
-    color: ghostwhite;
-    transition: color 0.4s;
+/* Button Hover Effects */
+.project-description .button:hover {
+    background: #fff;
+    color: #000;
 }
 
-/* Change text color on hover */
-.project-link-button:hover span {
-    color: black;
-}
-
-/* Pseudo-elements for animated background effect */
-.project-link-button::before,
-.project-link-button::after {
+/* Button Background Slide Animation */
+.project-description .button::before {
+    content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.1);
     z-index: 0;
+    transform: skewX(-30deg);
+    transition: all 0.4s ease-in-out;
 }
 
-.project-link-button::before {
-    content: "";
-    background: #000;
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+.project-description .button:hover::before {
+    left: 100%;
 }
 
-/* Background slide effect on hover */
-.project-link-button:hover::before {
-    transform: translate3d(100%, 0, 0);
+/* Button Text and Icon Stay Above Background */
+.project-description .button span,
+.project-description .button ion-icon {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+    }
+}
+
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    #main-content {
+        justify-content: end;
+    }
+    .button-container {
+        align-items: center;
+        gap: 3rem;
+    }
+    #AboutMe-Terminal p {
+        font-size: 0.9em;
+    }
+
+    .button {
+        font-size: 0.7rem;
+    }
+    .Section{
+        padding: 1rem;
+    }
+    #left-section {
+        display: none;
+    }
+    #right-section h1{
+        font-size: 1em;
+    }
+    #right-section h2{
+        font-size: 1rem;
+    }
+    #Section-2 h1{
+        font-size: 1.9em ;
+    }
+    div.progress-container{
+        display: none;
+    }
+    article.card p{
+        display: none;
+    }
+    article img{
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .project-card{
+        max-width: 200px;
+    }
+    article.project-card p{
+        font-size: 0.9em;
+    }
+
+}
+@media (max-width: 480px) {
+    #AboutMe-Terminal p {
+        font-size: 0.6em;
+    }
+    .Section h1{
+        font-size: 1.5em ;
+        padding-bottom: 0.5em;
+    }
+    .Section h2{
+        font-size: 1em;
+    }
+    .project-card{
+        max-width: 150px;
+    }
+    article.project-card p{
+        font-size: 0.5em;
+    }
+    .project-description .button{
+        width: 5.5em;
+    }
 }

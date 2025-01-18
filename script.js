@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     ///// Terminal Typing logic
     const commandText = 'echo AboutMe';
-    const aboutMeText = `I Have  degree in Computer Science and Business Management, 
+    const aboutMeText = `I have a degree in Computer Science and Business Management, 
     where I've built a strong foundation in programming, problem-solving, and analytical thinking. 
     My journey in tech is fueled by a passion for creating innovative applications that make a meaningful impact. 
     Whether I’m exploring new technologies or refining existing skills, I’m motivated by the endless possibilities in software development and am always excited to take on new challenges.`;
@@ -57,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
         showNavigation(navMenu);
         DisplaySections(1);
 
-        NavElements.forEach(navElement,index => {
+        NavElements.forEach((navElement,index) => {
             console.log(navElement)
             navElement.addEventListener('click', (event) => {
-                console.log('Clicked:', event.target);
                 NavElements.forEach(item => item.classList.remove('active'));
                 event.target.classList.add('active');
+                console.log(event.target)
                 showSection(index)
             });
         });
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach((section, i) => {
             if (i === index) {
                 section.classList.add('active');
-                console.log(section)
                 section.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start',

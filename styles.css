@@ -130,21 +130,17 @@ body {
     }
 }
 
-.Navigation-container nav ul li{
-    position: relative;
-    display: inline-block;
-}
 #Navigation {
     transform: translateY(-120%);
     opacity: 0;
     z-index: 100;
     transition: transform 0.8s ease-in-out, opacity 0.7s ease-in-out;
-    background: #e0e0e0;
+    background: #ffffff;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     display: flex;
     justify-content: center;
-    width: 21vw;
-    height: 3.5rem;
+    width: 20vw;
+    height: 2.9rem;
     padding: 0.5rem 2.5rem;
     margin: 2rem auto 1.5rem;
     border-radius: 1.3rem;
@@ -159,13 +155,27 @@ body {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 4vw;
+    gap: 6%;
+}
+
+nav ul li{
+    padding: 0.3em 1.8em;
+}
+
+nav ul li.active{
+    background-color: #eee7e7;
+    border: #000;
+    border-radius: 5em;
+    color: #000;
+}
+nav ul a:hover ion-icon.active {
+    color: #000;
 }
 
 .Navigation-container nav ul a {
     text-decoration: none;
     position: relative;
-    color: #001f3f;
+    color: #000000;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -173,12 +183,11 @@ nav ul {
     transition: color 0.3s ease;
 }
 
-.active{
-    color: #0974f1;
-}
 
 .Navigation-container nav ul a span {
     display: block;
+    color: #797979;
+    font-size: 0.9em;
     position: absolute;
     top: 100%;
     opacity: 0;
@@ -193,9 +202,9 @@ nav ul a:hover span {
 }
 
 ion-icon {
-    padding-top: 0.5rem;
     font-size: 1.5rem;
     transition: transform 0.3s ease;
+    color: #797979;
 }
 
 nav ul a:hover ion-icon {
@@ -359,6 +368,7 @@ section#Social-container{
 }
 /* Profile Card Styling */
 #profile-card {
+    display: flex;
     position: relative;
     border-radius: 50%;
     height: 35vw;
@@ -366,11 +376,22 @@ section#Social-container{
     max-height: 400px;
     min-width: 120px;
     min-height: 120px;
-    overflow: hidden;
     padding: 0.2rem;
     margin-top: 3.5rem;
     animation: float 3s ease-in-out infinite;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#profile-card::after {
+    content: " T";
+    position: absolute;
+    width: 100%;
+    top: 15em;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 80%;
+    z-index: 5;
+    filter: blur(25px);
+
 }
 /* Keyframes for Floating Effect */
 @keyframes float {
@@ -444,6 +465,7 @@ section#languages h2{
     width: 20%;
     height: 4.5rem;
     transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section#languages {
@@ -457,7 +479,7 @@ section#languages {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .progress-container {
@@ -560,25 +582,38 @@ div#icon-container{
 
 /* Container */
 #project-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    perspective: 1000px;
 }
 
 /* General Project Card Styling */
 .project-card {
+    position: relative;
     width: 90%;
     max-width: 300px;
     border-radius: 8px;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     background: #fff;
     margin: 1rem auto;
+    animation: bounce 3s infinite;
 }
 
+/* Keyframes for Card Bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 /* Project Card Front */
 .project-card-front {
     position: relative;
@@ -677,6 +712,8 @@ div#icon-container{
     position: relative;
     z-index: 1;
 }
+
+
 
 /* Responsive Styling */
 @media (max-width: 768px) {

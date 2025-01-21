@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     ///// Terminal Typing logic
-    const commandText = 'echo AboutMe';
-    const aboutMeText = `I have a degree in Computer Science and Business Management, 
-    where I've built a strong foundation in programming, problem-solving, and analytical thinking. 
-    My journey in tech is fueled by a passion for creating innovative applications that make a meaningful impact. 
-    Whether I’m exploring new technologies or refining existing skills, I’m motivated by the endless possibilities in software development and am always excited to take on new challenges.`;
+    const commandText = 'AboutMe';
+    const aboutMeText = `I am a developer with a passion for creating innovative solutions , I Love coding and learning new thing pushing the boundaries of what is possible.`;
 
     const commandElement = document.getElementById('command');
     const aboutMeElement = document.getElementById('Response');
@@ -17,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (commandIndex < commandText.length) {
             commandElement.textContent += commandText[commandIndex];
             commandIndex++;
-            setTimeout(typeCommand, 400);
+            setTimeout(typeCommand, 200);
         } else {
             setTimeout(typeAboutMe, 500);
         }
@@ -32,64 +29,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     typeCommand();
-    //Languages Level animation Logic
-        const  progressBars = document.querySelectorAll('.progress-bar')
-        progressBars.forEach(progressBar => {
-            const percentage = progressBar.getAttribute('data-percentage');
-
-            progressBar.style.width = `${percentage}%`
-
-            const percentageSpan = progressBar.nextElementSibling; 
-            percentageSpan.textContent = `${percentage}%`;
-        })
-
 
     /////////Scrolling logic
-
     const NavElements = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.Section');
     const navMenu = document.getElementById('Navigation');
 
     let currentSection = 0;
-    let isScrolling = false;
 
     window.addEventListener('load', () => {
         showNavigation(navMenu);
         DisplaySections(1);
 
-        NavElements.forEach((navElement,index) => {
-            console.log(navElement)
+        NavElements.forEach((navElement, index) => {
             navElement.addEventListener('click', (event) => {
                 NavElements.forEach(item => item.classList.remove('active'));
                 event.target.classList.add('active');
-                console.log(event.target)
-                showSection(index)
+                showSection(index);
             });
         });
     });
 
-    function showNavigation(navMenu){
-        if(currentSection == 0){
+    function showNavigation(navMenu) {
+        if (currentSection == 0) {
             navMenu.classList.add('active');
-        }
-        else{
+        } else {
             navMenu.classList.remove('active');
         }
-        
-
     }
-    function DisplaySections(){
-        const leftSection = document.getElementById('left-section')
-        const rightSection = document.getElementById('right-section')
+
+    function DisplaySections() {
+        const leftSection = document.getElementById('left-section');
+        const rightSection = document.getElementById('right-section');
         
         leftSection.classList.add('active');
         rightSection.classList.add('active');
     }
 
     function showSection(index) {
+
         sections.forEach((section, i) => {
-            if (i === index) {
-                section.classList.add('active');
+            if (i == index) {
                 section.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start',
@@ -98,29 +78,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function handleScroll(event) {
-        if (isScrolling) return;
-        isScrolling = true;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                showSection(entry.target.dataset.index)
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { 
+        root: null,
+        threshold: 0.02
+    });
+    const projectObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    },{
+        root: null,
+        threshold: 0.10
+    });
 
-        if (event.deltaY > 0 && currentSection < sections.length - 1) {
-            // Scroll down, but only if not at the last section
-            currentSection++;
-            showSection(currentSection);
-        } else if (event.deltaY < 0 && currentSection > 0) {
-            // Scroll up, but only if not at the first section
-            currentSection--;
-            showSection(currentSection);
-            
-        }
-        else{
-            showSection(currentSection)
-        }
+    console.log(document.querySelectorAll('.project-card'))
 
-        setTimeout(() => {
-            isScrolling = false; // Allow scrolling again after a short delay
-        }, 1000); // Adjust timeout for smoothness
-    }
+    document.querySelectorAll('.project-card').forEach(project => projectObserver.observe(project));
 
-    showSection(currentSection);
-    window.addEventListener('wheel', handleScroll); 
-})
+    sections.forEach(section => observer.observe(section));
+
+});

@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script type="module" src="script.js"></script>
     <title>SpherCodes</title>
 </head>
 <body>
     <div class="container">
         <!-- <canvas class="Section " id="canvas"></canvas> -->
-        <div class="Section"> 
+        <div class="Section" id="section-1"  data-index="0"> 
             <!-- Navigation Section -->
             <div class="Navigation-container">
                 <section id="Navigation">
                     <nav>
                         <ul>
-                            <li class="active">
+                            <li a class="active" >
                                 <a href="#section-1">
                                     <ion-icon name="home-outline"  class="nav-link"></ion-icon>
                                     <span>Home</span>
@@ -44,15 +45,15 @@
             </div>            
     
             <!-- Main Content Section -->
-            <section id="main-content" class="page">
+            <section  id="main-content" class="page">
                 <div id="left-section">
                     <section id="profile-card">
-                        <img src="lib/images/Profile-picture.jpg" alt="Profile Picture" id="profile-image">
+                        <img src="lib/images/Profile-picture.jpg" alt="Profile Picture" class="profile-image">
                     </section>
                 </div>        
     
                 <div id="right-section">
-                    <p>Hello, I am</p>
+                    <p>Hi there, I am</p>
                     <h1>Siphesihle Mvelase</h1>
                     <h2>Software<span> Developer</span></h2>
                     
@@ -63,158 +64,158 @@
                         <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">Contact Me</button>
                     </section>
                     <section id="Social-container">
-                        <a href="https://github.com/sphercodes" ><ion-icon name="logo-github"></ion-icon></a>
-                        <a href="www.linkedin.com/in/sphercodes" ><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a class="responsive-icon" href="https://github.com/sphercodes" ><ion-icon  name="logo-github"></ion-icon></a>
+                        <a class="responsive-icon" href="www.linkedin.com/in/sphercodes" ><ion-icon name="logo-linkedin"></ion-icon></a>
                     </section>
                 </div>
             </section>
         </div>
-        <div class="Section" id="Section-2">
+        <div class="Section container grid-container " id="Section-2"  data-index="1">
             <h1>About Me</h1>
-            <section id="AboutMe-Terminal">
-                <div id="icon-container">
-                    <div id="Redicon"></div>
-                    <div id="Yellowicon"></div>
-                    <div id="greenicon"></div>
-                    <p>bash</p>
-                    
+            
+            <div class="grid-row">
+                <div class="grid-item item-1  reactive-container">
+                    <div>
+                        <div class="profile">
+                            <img src="lib/images/young-programmer.jpg" alt="Profile Picture" class="profile-image">
+                        </div>
+                        <h2>Siphesihle Mvelase</h2>
+                        <p>
+                            I am a BSc graduate student from the University of the Free State. I am a passionate aspiring software developer
+                            who loves bringing ideas to life through code.
+                        </p>
+                    </div>
                 </div>
-                <div class="typing-animation">
-                    <p><i class="bash" id="command">$ </i></p>
-                    <p id="Response">
-                    </p>
-                    <p class="bash">$ </p>
+                
+                <div class="grid-item item-2 reactive-container">
+                    <div id="AboutMe-Terminal">
+                        <div id="icon-container">
+                            <div id="Redicon"></div>
+                            <div id="Yellowicon"></div>
+                            <div id="greenicon"></div>
+                            <p>bash</p>
+                            
+                        </div>
+                        <div class="typing-animation">
+                            <p><i class="bash" id="command">$ </i></p>
+                            <p id="Response">
+                            </p>
+                            <p class="bash">$ </p>
+                        </div>
+                    </div>
                 </div>
-    
-            </section>
+            </div>
         
-            <section id="languages">
-                <h2>Technologies and languages i use</h2>
-                <article class="card">
-                    <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="logo">
-                    <p class="language-name">C#</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="60"></div>
-                        <span class="percentage"></span>
+            <div class="grid-row">
+                <div class="grid-item item-3 reactive-container" id="languages">
+                    <h2>Tool Box</h2>
+                    <h3>Explore the tools and technologies I use to bring these ideas to life</h3>
+                    
+                    <div class="icon-container">
+                        <div class="icon-track">
+                            <div class="icon-item">
+                                <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="icon">
+                                <span class="icon-name">C#</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/NET core.svg" alt="C# Logo" class="icon">
+                                <span class="icon-name">.Net Core</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="icon">
+                                <span class="icon-name">JavaScript</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/python.svg" alt="Python Logo" class="icon">
+                                <span class="icon-name">Python</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/bash.svg" alt="Bash Script Logo" class="icon">
+                                <span class="icon-name">Bash</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/html5.svg" alt="HTML5 Logo" class="icon">
+                                <span class="icon-name">HTML5</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/css3.svg" alt="CSS3 Logo" class="icon">
+                                <span class="icon-name">CSS3</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="icon">
+                                <span class="icon-name">Bootstrap</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/TypeScript.svg" alt="Node.js Logo" class="icon">
+                                <span class="icon-name">Type-Script</span>
+                            </div> <div class="icon-item">
+                                <img src="lib/images/React.svg" alt="Node.js Logo" class="icon">
+                                <span class="icon-name">React</span>
+                            </div> <div class="icon-item">
+                                <img src="lib/images/Next.js.svg" alt="Node.js Logo" class="icon">
+                                <span class="icon-name">Next.js</span>
+                            </div> <div class="icon-item">
+                                <img src="lib/images/nodejs.svg" alt="Node.js Logo" class="icon">
+                                <span class="icon-name">Node.js</span>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="logo">
-                    <p class="language-name">JavaScript</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="40"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/python.svg" alt="Python Logo" class="logo">
-                    <p class="language-name">Python</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="20"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/bash.svg" alt="Bash Script Logo" class="logo">
-                    <p class="language-name">Bash Script</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="20"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/html5.svg" alt="HTML 5 Logo" class="logo">
-                    <p class="language-name">HTML 5</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="70"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/css3.svg" alt="CSS Logo" class="logo">
-                    <p class="language-name">CSS</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="60"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="logo">
-                    <p class="language-name">Bootstrap</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="50"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/nodejs.svg" alt="Node JS Logo" class="logo">
-                    <p class="language-name">Node JS</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="20"></div>
-                        <span class="percentage"></span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="lib/images/microsoft-sql-server.svg" alt="SQL Server Logo" class="logo">
-                    <p class="language-name">SQL Server</p>
-                    <div class="progress-container">
-                        <div class="progress-bar" data-percentage="60"></div>
-                        <span class="percentage"></span> 
-                    </div>
-                </article>
-            </section>
+                </div>
+                <div class="grid-item item-4">
+                    <div class="inner-grid reactive-container"></div>
+                    <div class="inner-grid reactive-container"></div>
+                </div>
+            </div>
+            
         </div>
-        <div class="Section" id="section-3">
+        <div class="Section" id="section-3"  data-index="2">
             <h1>Projects</h1>
-            <h2>Browse through my projects</h2>
+            <h2>Browse through some of the projects i have recently worked on</h2>
             <section id="project-container">
-                <article class="project-card">
-                    <section class="project-card-front">
-                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                    </section>
-                    <section class="project-description">
-                        <h3>Sink Hero</h3>
-                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
-                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
-                            </a>
-                    </section>
+                <article class="project-card reactive-container">
+                    <div class="project-item">
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h1>Sink Hero</h1>
+                                <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
+                                <div class="button-container">
+                                    <div class="button">
+                                        <a href="">Visit</a>
+                                    </div>
+                                    <div class="icon responsive-icon">
+                                        <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-img">
+                            <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                        </div>
+                    </div>
                 </article>
-                <article class="project-card">
-                    <section class="project-card-front">
-                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                    </section>
-                    <section class="project-description">
-                        <h3>Sink Hero</h3>
-                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
-                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
-                            </a>
-                    </section>
-                </article>
-                <article class="project-card">
-                    <section class="project-card-front">
-                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                    </section>
-                    <section class="project-description">
-                        <h3>Sink Hero</h3>
-                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
-                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
-                            </a>
-                    </section>
-                </article>
-                <article class="project-card">
-                    <section class="project-card-front">
-                        <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                    </section>
-                    <section class="project-description">
-                        <h3>Sink Hero</h3>
-                        <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                            <a class=" button" href="https://github.com/SpherCodes/Maize-Game">
-                                <ion-icon name="logo-github"></ion-icon><span>Open</span>
-                            </a>
-                    </section>
+
+                <article class="project-card reactive-container">
+                    <div class="project-item">
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h1>Horizon Finance</h1>
+                                <p>This is a React web based Banking application, where after linking their bank account , 
+                                    users can view their account balance, transaction history, 
+                                    and transfer funds from one bank account to another.</p>
+                                <div class="button-container">
+                                    <div class="button">
+                                        <a href="">Visit</a>
+                                    </div>
+                                    <div class="icon responsive-icon">
+                                        <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-img">
+                            <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                        </div>
+                    </div>
                 </article>
             </section>        
         </div>

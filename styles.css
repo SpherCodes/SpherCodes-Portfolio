@@ -16,12 +16,11 @@ html {
 /* Body Styling */
 body {
     background-color: var(--bg--color);
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 .container{
     max-width: 100%;
-    padding: 1rem;
     position: relative;
     contain: layout inline-size;
 }
@@ -36,27 +35,23 @@ body {
 }
 .Section{
     position: relative;
-    transition: all 0.8s ease-in-out;
-    opacity: 0;
+    transition: all 0.5s ease-in-out;
     background-color: white;
     padding: 5rem;
     min-height: 100vh;
-    margin: 0 auto;
     padding-top: 1rem ;
 }
-    .Section.active{
-        opacity: 1;
-    }
     .Section h2{
         text-align: center;
+        font-weight: 500;
         color: #666;
+        font-size: 1em;
+        padding-bottom: 1.5em;
     }
     .Section h1{
-        padding-top: 0.5rem;
-        padding-bottom: 1rem;
-        color: black;
-        font-size: 2.5rem;
         text-align: center;
+        color: #3b3b3b;
+        font-size: 2.5em;
     }
 .page {
     display: flex;
@@ -168,7 +163,7 @@ nav ul li.active{
     border-radius: 5em;
     color: #000;
 }
-nav ul a:hover ion-icon.active {
+nav ul li a ion-icon .active {
     color: #000;
 }
 
@@ -199,17 +194,21 @@ nav ul a:hover ion-icon.active {
 nav ul a:hover span {
     opacity: 1;
     transform: translateY(0);
+    color: #000;
+    font-size: .8em;
+    margin-top: .5em;
 }
 
 ion-icon {
     font-size: 1.5rem;
-    transition: transform 0.3s ease;
     color: #797979;
 }
-
-nav ul a:hover ion-icon {
-    transform: translateY(-10px);
+ion-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
+
+
 #Navigation > #glow-nav {
     box-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);
 }
@@ -222,7 +221,7 @@ nav ul a:hover ion-icon {
 }
 
 #left-section {
-    padding: 1rem;
+    padding: .5em;
     width: fit-content;
     transform: translateY(20rem);
     opacity: 0;
@@ -251,7 +250,7 @@ nav ul a:hover ion-icon {
 }
 #right-section h1 {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.5em;
     color: #121212;
 }
 #right-section h2{
@@ -304,10 +303,13 @@ h1#job-title {
 
 /* Buttons */
 div#right-section .button-container {
-    display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
+}
+.button-container{
+    display: flex;
+    gap: 1.5rem;
 }
 
 .button {
@@ -365,6 +367,11 @@ section#Social-container{
     font-size: 2rem;
     color: #001f3f;
     cursor: pointer;
+    
+}
+.responsive-icon:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 /* Profile Card Styling */
 #profile-card {
@@ -428,13 +435,15 @@ section#Social-container{
     }
 }
 /* Profile Image */
-#profile-image {
+.profile-image {
     border-radius: 50%;
-    width: 100%;
-    height: 100%; 
     object-fit: cover;
     position: relative;
     z-index: 2;
+}
+div#left-section img{
+    width: 100%;
+    height: 100%; 
 }
 
 #left-section h1 {
@@ -451,6 +460,203 @@ section#Social-container{
 
 
 /* About Me section */
+/* Grid container settings */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Individual grid rows */
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Grid items */
+.grid-item {
+    display: flex;
+    border-radius: 2em;
+    font-weight: bold;
+    min-height: 5em;
+    background-color: whitesmoke;
+}
+
+.reactive-container:hover{
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Specific item sizes */
+.item-1 {
+    flex: 1; /* Adjusts based on sibling items */
+    align-items: center;
+}
+.item-2 {
+    flex: 2; /* Takes twice as much space as item-1 */
+
+}
+.item-3 {
+    flex: 1; /* Takes twice as much space as item-4 */
+    flex-direction: column;
+    padding: 1em;
+
+}
+.item-4 {
+    flex: 1; /* Adjust width based on this weight */
+    background-color: white;
+    gap: 1em;
+    flex-direction: column;
+}
+.item-1, .item-2, .item-3, .item-4 {
+    opacity: 0;
+    transform: translateY(-20em);
+    visibility: hidden;
+    transition: 
+        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+        opacity 0.8s ease-in;
+        visibility: 0s linear 0.8s;
+}
+
+.item-1 {
+    flex: 1;
+    align-items: center;
+}
+.item-2 {
+    flex: 2;
+}
+.item-3 {
+    flex: 1;
+    flex-direction: column;
+    padding: 1em;
+}
+.item-4 {
+    flex: 1;
+    background-color: white;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.visible div.item-1 {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+.visible div.item-2 {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.4s;
+}
+.visible div.item-3 {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.visible div.item-4 {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.8s;
+}
+
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .item-1, .item-2, .item-3, .item-4 {
+        transform: translateY(-10em);
+    }
+}
+
+.inner-grid{
+    background-color: whitesmoke;
+    min-height: 50%;
+    min-width: 50%;
+    border-radius: 2em;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+div.profile img {
+    width: 25%;
+}
+div.item-1{
+    font-size: .9em;
+    font-weight: normal;
+    text-align: center;
+    padding: 2em;
+}
+
+div.item-1 h2{
+    font-size: 1.2rem;
+    padding: .5em;
+    font-weight:600;
+    color: #000;
+}
+div.item-1 p{
+    color: #2c2c2c;
+}
+div.item-3 h2{
+    color: #000;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: left;
+    padding: 0;
+}
+div.item-3 h3{
+    font-weight: normal;
+    text-align: left;
+    color: #858585;
+    font-size: 0.8em;
+}
+div#languages .icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 1em;
+    padding-top: 3em;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.icon-item {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    background-color: #dfdfdf;
+    border-radius: .5em;
+    padding: .5em;
+    align-items: center;
+    margin-right: .5em;
+    margin-top: .8em;
+    opacity: 1;
+    animation: moveIcons 10s linear infinite;
+}
+.icon {
+    margin-right: 20px;
+    opacity: 1;
+}
+div.icon-item .icon{
+    width: 30px;
+    height: 20px;
+}
+.icon-name {
+    font-size: .7rem;
+    color: #333;  /* Adjust color of the name */
+}
+
 /* Cards */
 section#languages h2{
     width: 100%;
@@ -471,51 +677,12 @@ section#languages h2{
 section#languages {
     display: flex;
     color: #000;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.progress-container {
-    position: absolute;
-    left: 25%;
-    top: 30%;
-    width: 0;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    height: 1.3rem;
-    overflow: hidden;
-    margin: auto;
-    transition: width 0.5s ease-in-out, opacity 0.5s ease;
-}
-
-.card:hover .progress-container {
-    width: 70%;
-    opacity: 1;
-}
-
-div.progress-bar {
-    position: absolute;
-    height: 100%;
-    background-color: #92ff77;
-    transition: width 1s ease-in-out; 
-}
-.percentage {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-    pointer-events: none;
-}
 
 .card img {
     margin: auto 0;
@@ -536,11 +703,12 @@ div.progress-bar {
     z-index: 1;
 }
 #AboutMe-Terminal{
-    width: 90%;
+    width: 100%;
+    height: 100%;
     margin: auto;
     background-color:black;
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 2em;
     padding: 1.5rem;
     margin-bottom:2rem ;
 }
@@ -548,9 +716,11 @@ div.progress-bar {
 #AboutMe-Terminal p {
     padding-bottom: 1rem;
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: .8em;
 }
+
 div#icon-container{
-    padding-bottom: 1.5rem;
+    padding-bottom: .5rem;
     display: flex;
     gap: 0.5rem;
     text-align: end;
@@ -559,8 +729,8 @@ div#icon-container{
         margin-left: auto;
     }
 #Redicon, #Yellowicon, #greenicon {
-    width: 20px; 
-    height: 20px; 
+    width: 15px; 
+    height: 15px; 
     border-radius: 50%;
 }
 #Redicon {
@@ -582,138 +752,81 @@ div#icon-container{
 
 /* Container */
 #project-container {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    perspective: 1000px;
-}
-
-/* General Project Card Styling */
-.project-card {
-    position: relative;
-    width: 90%;
-    max-width: 300px;
-    border-radius: 8px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background: #fff;
-    margin: 1rem auto;
-    animation: bounce 3s infinite;
-}
-
-/* Keyframes for Card Bounce */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-/* Project Card Front */
-.project-card-front {
-    position: relative;
-}
-.project-card img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Hover Effect on Front Image */
-.project-card-front:hover img {
-    opacity: 0.5;
-}
-
-/* Description Overlay */
-.project-description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 10px;
-    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-    color: #fff;
-    padding: 20px;
-    line-height: 1.5;
-    border-radius: 8px;
-    pointer-events: auto;
-    transform: translateY(100%);
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.project-card:hover .project-description {
-    transform: translateY(0);
+    height: 40em;
+    gap: 3em;
 }
 
-/* Button Styling */
-.project-description .button {
+#project-container h1{
+    margin: auto;
+    padding-bottom: 1em;
+    font-weight: 500;
+    padding-left: .5em;
+    padding-top: 1em;
+    font-size: 2em;
+    border-bottom: 1px solid #000;
+}
+.project-card{
     display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0.8rem 1.5rem;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
+    opacity: 0;
+    width: 100%;
+    border-radius: 3em;
+    height: 100%;
+    background-color: whitesmoke;
+    z-index: 5;
+    border: 1px solid #ddd;
     overflow: hidden;
-    transition: background 0.5s ease, color 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(10em);
+    transition: transform 0.6s ease-in-out;
 }
-
-/* Button Icon Styling */
-.project-description .button ion-icon {
-    font-size: 1.2rem;
-    color: inherit;
+.project-card .active{
+    transform: translateY(0em);
+    opacity: 1;
 }
-
-/* Button Hover Effects */
-.project-description .button:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* Button Background Slide Animation */
-.project-description .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
+.project-item{
+    display: flex;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: 0;
-    transform: skewX(-30deg);
-    transition: all 0.4s ease-in-out;
 }
-
-.project-description .button:hover::before {
-    left: 100%;
+.project-info{
+    flex: 2;
 }
-
-/* Button Text and Icon Stay Above Background */
-.project-description .button span,
-.project-description .button ion-icon {
-    position: relative;
-    z-index: 1;
+.project-img{
+    background-color: #ff0000;
+    margin-top: auto;
+    border-radius: 3em 0 3em 0;
+    height: 70%;
+    flex: 1;
 }
-
-
+.project-description{
+    padding: 0 4em;
+}
+.project-description p{
+    color: #686868;
+    padding: 2em 0;
+}
+.project-description .button{
+    border-radius: 1em;
+}.project-description ion-icon{
+    font-size: 2.5rem;
+    color: #000;
+}
+.project-card .button-container{
+    margin-bottom: 1em;
+}
+.project-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3em 0 3em 0;
+}
+article.project-card.visible{
+    opacity: 1;
+    transform: translate(0);
+}
 
 /* Responsive Styling */
 @media (max-width: 768px) {

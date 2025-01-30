@@ -4,221 +4,346 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script type="module" src="script.js"></script>
     <title>SpherCodes</title>
 </head>
 <body>
-    <div class="container">
-        <!-- <canvas class="Section " id="canvas"></canvas> -->
-        <div class="Section" id="section-1"  data-index="0"> 
-            <!-- Navigation Section -->
-            <div class="Navigation-container">
-                <section id="Navigation">
-                    <nav>
-                        <ul>
-                            <li a class="active" >
-                                <a href="#section-1">
-                                    <ion-icon name="home-outline"  class="nav-link"></ion-icon>
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section-2">
-                                    <ion-icon name="hammer-outline" class="nav-link"></ion-icon>
-                                    <span>Skills</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section-3">
-                                    <ion-icon name="folder-open-outline" class="nav-link"></ion-icon>
-                                    <span>Projects</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
-                <label class="switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <span class="slider"></span>
-                </label>
-            </div>            
-    
-            <!-- Main Content Section -->
-            <section  id="main-content" class="page">
-                <div id="left-section">
-                    <section id="profile-card">
-                        <img src="lib/images/Profile-picture.jpg" alt="Profile Picture" class="profile-image">
-                    </section>
-                </div>        
-    
-                <div id="right-section">
-                    <p>Hi there, I am</p>
-                    <h1>Siphesihle Mvelase</h1>
-                    <h2>Software<span> Developer</span></h2>
-                    
-                    <section class="button-container">
-                        <a  class="button" href="lib/docs/resume.pdf">
-                            Download CV
-                        </a>
-                        <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">Contact Me</button>
-                    </section>
-                    <section id="Social-container">
-                        <a class="responsive-icon" href="https://github.com/sphercodes" ><ion-icon  name="logo-github"></ion-icon></a>
-                        <a class="responsive-icon" href="www.linkedin.com/in/sphercodes" ><ion-icon name="logo-linkedin"></ion-icon></a>
-                    </section>
-                </div>
-            </section>
-        </div>
-        <div class="Section container grid-container " id="Section-2"  data-index="1">
-            <h1>About Me</h1>
-            
-            <div class="grid-row">
-                <div class="grid-item item-1  reactive-container">
-                    <div>
-                        <div class="profile">
-                            <img src="lib/images/young-programmer.jpg" alt="Profile Picture" class="profile-image">
-                        </div>
-                        <h2>Siphesihle Mvelase</h2>
-                        <p>
-                            I am a BSc graduate student from the University of the Free State. I am a passionate aspiring software developer
-                            who loves bringing ideas to life through code.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="grid-item item-2 reactive-container">
-                    <div id="AboutMe-Terminal">
-                        <div id="icon-container">
-                            <div id="Redicon"></div>
-                            <div id="Yellowicon"></div>
-                            <div id="greenicon"></div>
-                            <p>bash</p>
-                            
-                        </div>
-                        <div class="typing-animation">
-                            <p><i class="bash" id="command">$ </i></p>
-                            <p id="Response">
-                            </p>
-                            <p class="bash">$ </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="grid-row">
-                <div class="grid-item item-3 reactive-container" id="languages">
-                    <h2>Tool Box</h2>
-                    <h3>Explore the tools and technologies I use to bring these ideas to life</h3>
-                    
-                    <div class="icon-container">
-                        <div class="icon-track">
-                            <div class="icon-item">
-                                <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="icon">
-                                <span class="icon-name">C#</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/NET core.svg" alt="C# Logo" class="icon">
-                                <span class="icon-name">.Net Core</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="icon">
-                                <span class="icon-name">JavaScript</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/python.svg" alt="Python Logo" class="icon">
-                                <span class="icon-name">Python</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/bash.svg" alt="Bash Script Logo" class="icon">
-                                <span class="icon-name">Bash</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/html5.svg" alt="HTML5 Logo" class="icon">
-                                <span class="icon-name">HTML5</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/css3.svg" alt="CSS3 Logo" class="icon">
-                                <span class="icon-name">CSS3</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="icon">
-                                <span class="icon-name">Bootstrap</span>
-                            </div>
-                            <div class="icon-item">
-                                <img src="lib/images/TypeScript.svg" alt="Node.js Logo" class="icon">
-                                <span class="icon-name">Type-Script</span>
-                            </div> <div class="icon-item">
-                                <img src="lib/images/React.svg" alt="Node.js Logo" class="icon">
-                                <span class="icon-name">React</span>
-                            </div> <div class="icon-item">
-                                <img src="lib/images/Next.js.svg" alt="Node.js Logo" class="icon">
-                                <span class="icon-name">Next.js</span>
-                            </div> <div class="icon-item">
-                                <img src="lib/images/nodejs.svg" alt="Node.js Logo" class="icon">
-                                <span class="icon-name">Node.js</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item item-4">
-                    <div class="inner-grid reactive-container"></div>
-                    <div class="inner-grid reactive-container"></div>
-                </div>
-            </div>
-            
-        </div>
-        <div class="Section" id="section-3"  data-index="2">
-            <h1>Projects</h1>
-            <h2>Browse through some of the projects i have recently worked on</h2>
-            <section id="project-container">
-                <article class="project-card reactive-container">
-                    <div class="project-item">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h1>Sink Hero</h1>
-                                <p>Sink Hero is a web-based interactive maze game built using HTML, CSS, and JavaScript.</p>
-                                <div class="button-container">
-                                    <div class="button">
-                                        <a href="">Visit</a>
-                                    </div>
-                                    <div class="icon responsive-icon">
-                                        <a href=""><ion-icon name="logo-github"></ion-icon></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-img">
-                            <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
-                        </div>
-                    </div>
-                </article>
+    <div class="Navigation-container">
+        <nav id="Navigation">
+            <ul>
+                <li class="active">
+                    <a href="#section-1">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-2">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-3">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-                <article class="project-card reactive-container">
-                    <div class="project-item">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h1>Horizon Finance</h1>
-                                <p>This is a React web based Banking application, where after linking their bank account , 
-                                    users can view their account balance, transaction history, 
-                                    and transfer funds from one bank account to another.</p>
-                                <div class="button-container">
-                                    <div class="button">
-                                        <a href="">Visit</a>
+    <main>
+        <section class="Section" id="section-1">
+            <div class="container page">
+                <div id="left-section">
+                    <div id="profile-card">
+                        <img src="lib/images/young-programmer.jpg" alt="Profile Picture" class="profile-image">
+                    </div>
+                </div>
+                <div id="right-section">
+                    <p>👋 Hello, I'm</p>
+                    <h1>Siphesihle Mvelase</h1>
+                    <h2>Software <span>Developer</span></h2>
+                    <p class="intro-text">Crafting elegant digital solutions with passion and precision</p>
+                    <div class="button-container">
+                        <a href="lib/docs/resume.pdf" class="button">
+                            <span>Download CV</span>
+                        </a>
+                        <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">
+                            <span>Contact Me</span>
+                        </button>
+                    </div>
+                    <div id="Social-container">
+                        <a href="https://github.com/sphercodes" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        <a href="https://linkedin.com/in/sphercodes" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Section" id="section-2">
+            <div class="container grid-container">
+                <header class="text-center">
+                    <h1 class="section-title">About Me</h1>
+                    <h2 class="section-subtitle">Let me tell you a bit about myself</h2>
+                </header>
+                <div class="grid-row">
+                    <div class="grid-item item-1 reactive-container">
+                        <div class="profile-section">
+                            <div class="profile">
+                                <img src="lib/images/Profile-picture.jpg" alt="Profile Picture" class="profile-image">
+                            </div>
+                            <h2>Siphesihle Mvelase</h2>
+                            <div class="about-content">
+                                <div class="quick-stats">
+                                    <div class="stat-item">
+                                        <ion-icon name="school-outline"></ion-icon>
+                                        <span>BSc Computer Science & Business</span>
                                     </div>
-                                    <div class="icon responsive-icon">
-                                        <a href=""><ion-icon name="logo-github"></ion-icon></a>
-                                    </div>
+                                </div>
+                                <div class="interests-container">
+                                    <div class="interest-tag">Problem Solving</div>
+                                    <div class="interest-tag">Web Development</div>
+                                    <div class="interest-tag">AI & ML</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="project-img">
-                            <img src="lib/images/Sinkhero.png" alt="Sink Hero Screenshot">
+                    </div>
+                    
+                    <div class="grid-item item-2 reactive-container">
+                        <div id="AboutMe-Terminal">
+                            <div id="icon-container">
+                                <div class="terminal-icons">
+                                    <div id="Redicon"></div>
+                                    <div id="Yellowicon"></div>
+                                    <div id="greenicon"></div>
+                                </div>
+                                <p>about.sh</p>
+                            </div>
+                            <div class="typing-animation">
+                                <p><span class="bash" id="command">$</span></p>
+                                <p id="Response"></p>
+                                <p><span class="bash">$</span><span class="cursor"></span></p>
+                            </div>
                         </div>
                     </div>
-                </article>
-            </section>        
-        </div>
+                </div>
+            
+                <div class="grid-row">
+                    <div class="grid-item item-3 reactive-container" id="languages">
+                        <h2>Tool Box</h2>
+                        <h2>Explore the tools and technologies I use to bring these ideas to life</h2>
+                        
+                        <div class="icon-container">
+                            <div class="">
+                                <div class="icon-item">
+                                    <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="icon">
+                                    <span class="icon-name">C#</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/NET core.svg" alt="C# Logo" class="icon">
+                                    <span class="icon-name">.Net Core</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="icon">
+                                    <span class="icon-name">JavaScript</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/python.svg" alt="Python Logo" class="icon">
+                                    <span class="icon-name">Python</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/bash.svg" alt="Bash Script Logo" class="icon">
+                                    <span class="icon-name">Bash</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/html5.svg" alt="HTML5 Logo" class="icon">
+                                    <span class="icon-name">HTML5</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/css3.svg" alt="CSS3 Logo" class="icon">
+                                    <span class="icon-name">CSS3</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="icon">
+                                    <span class="icon-name">Bootstrap</span>
+                                </div>
+                                <div class="icon-item">
+                                    <img src="lib/images/TypeScript.svg" alt="Node.js Logo" class="icon">
+                                    <span class="icon-name">Type-Script</span>
+                                </div> <div class="icon-item">
+                                    <img src="lib/images/React.svg" alt="Node.js Logo" class="icon">
+                                    <span class="icon-name">React</span>
+                                </div> <div class="icon-item">
+                                    <img src="lib/images/Next.js.svg" alt="Node.js Logo" class="icon">
+                                    <span class="icon-name">Next.js</span>
+                                </div> <div class="icon-item">
+                                    <img src="lib/images/nodejs.svg" alt="Node.js Logo" class="icon">
+                                    <span class="icon-name">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item item-4">
+                        <div class="inner-grid reactive-container">
+                            <div class="stat-card">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                                <div class="stat-content">
+                                    <h3>Current Focus</h3>
+                                    <p>Full Stack Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-grid reactive-container">
+                            <div class="stat-card">
+                                <ion-icon name="bulb-outline"></ion-icon>
+                                <div class="stat-content">
+                                    <h3>Learning</h3>
+                                    <p>Cloud & DevOps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-item item-5 reactive-container">
+                        <h2>Achievements & Experience</h2>
+                        <div class="achievements-container">
+                            <div class="achievement-card">
+                                <ion-icon name="school-outline"></ion-icon>
+                                <div class="achievement-content">
+                                    <h3>Student Assistant</h3>
+                                    <p>Provided guidance and support in Computer Science modules, helping students master programming concepts</p>
+                                </div>
+                            </div>
+                            <div class="achievement-card">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                                <div class="achievement-content">
+                                    <h3>CHPC Competition Finalist</h3>
+                                    <p>Competed in the Center for High Performance Computing National Competition Finals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Section" id="projects">
+            <div class="container">
+                <header class="text-center">
+                    <h1 class="section-title">Featured Projects</h1>
+                    <h2 class="section-subtitle">A showcase of my recent work</h2>
+                </header>
+                <div class="projects-container">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="lib/images/sinkhero.png" alt="Sink Hero Screenshot" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#live-demo" class="project-link" target="_blank" rel="noopener">
+                                        <ion-icon name="globe-outline"></ion-icon>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#github" class="project-link" target="_blank" rel="noopener">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <span>Source Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-title-wrapper">
+                                    <h3 class="project-title">Sink Hero</h3>
+                                    <span class="project-status">Completed</span>
+                                </div>
+                                <div class="project-links-desktop">
+                                    <a href="#github" class="project-icon-link" title="View Source Code">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                    </a>
+                                    <a href="#live" class="project-icon-link" title="View Live Demo">
+                                        <ion-icon name="open-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">2024</span>
+                                <span class="project-type">Full Stack App</span>
+                            </div>
+                            <p class="project-description">
+                                A comprehensive water management solution that helps users monitor and optimize their water usage. 
+                                Features real-time tracking, usage analytics, and personalized conservation tips.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Real-time water usage monitoring</li>
+                                    <li>Interactive usage visualizations</li>
+                                    <li>Personalized conservation tips</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express.js</span>
+                                <span class="tech-badge">javascript</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="lib/images/sinkhero.png" alt="Sink Hero Screenshot" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#live-demo" class="project-link" target="_blank" rel="noopener">
+                                        <ion-icon name="globe-outline"></ion-icon>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#github" class="project-link" target="_blank" rel="noopener">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <span>Source Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-title-wrapper">
+                                    <h3 class="project-title">Horizon Finance</h3>
+                                    <span class="project-status">In progress</span>
+                                </div>
+                                <div class="project-links-desktop">
+                                    <a href="#github" class="project-icon-link" title="View Source Code">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                    </a>
+                                    <a href="#live" class="project-icon-link" title="View Live Demo">
+                                        <ion-icon name="open-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">2024</span>
+                                <span class="project-type">Full Stack App</span>
+                            </div>
+                            <p class="project-description">
+                                A comprehensive water management solution that helps users monitor and optimize their water usage. 
+                                Features real-time tracking, usage analytics, and personalized conservation tips.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Real-time water usage monitoring</li>
+                                    <li>Interactive usage visualizations</li>
+                                    <li>Personalized conservation tips</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">Appwrite</span>
+                                <span class="tech-badge">Chart.js</span>
+                                <span class="tech-badge">Tailwind css</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

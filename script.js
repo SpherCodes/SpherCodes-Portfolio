@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     ///// Terminal Typing logic
     const commandText = 'AboutMe';
-    const aboutMeText = `I am a developer with a passion for creating innovative solutions , I Love coding and learning new thing pushing the boundaries of what is possible.`;
+    const aboutMeText = `I am a developer with a passion for creating innovative solutions , I Love coding and learning new thing pushing the boundaries of what is possible.
+    I am a BSc graduate from the University of the Free State with a passion for software development. 
+                                My journey in tech has equipped me with strong problem-solving skills and a deep understanding of software development principles.`;
 
     const commandElement = document.getElementById('command');
     const aboutMeElement = document.getElementById('Response');
@@ -81,16 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                showSection(entry.target.dataset.index)
                 entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
             }
         });
     }, { 
         root: null,
-        threshold: 0.02
+        threshold: 0.1
     });
+
+    // Observe the grid container
+    document.querySelectorAll('.grid-container').forEach(container => {
+        observer.observe(container);
+    });
+
     const projectObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -101,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     },{
         root: null,
-        threshold: 0.10
+        threshold: 0.20
     });
 
     console.log(document.querySelectorAll('.project-card'))
@@ -110,4 +115,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sections.forEach(section => observer.observe(section));
 
+    // Observer for project cards
+    const observeProjectCards = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    };
+
+    // Initialize observers when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        observeProjectCards();
+    });
 });

@@ -1,0 +1,23 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: radial-gradient(circle at top right, rgba(33, 150, 243, 0.1), transparent 70%),
+    radial-gradient(circle at bottom left, rgba(233, 30, 99, 0.1), transparent 70%);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    color: var(--text-dark);
+}
+
+h1, h2 {
+    line-height: 1;
+}

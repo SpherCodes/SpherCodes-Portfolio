@@ -40,6 +40,10 @@
     transition: opacity 0.5s ease;
 }
 
+.Section p{
+    color: var(--text-light);
+}
+
 #section-1 {
     min-height: 100vh;
     display: grid;
@@ -253,6 +257,7 @@ div#right-section .button-container {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    margin-top: 2.5rem;
 }
 
 .button {
@@ -276,6 +281,79 @@ div#right-section .button-container {
     padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 500;
+    position: relative;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.button:first-child {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.button:last-child {
+    background: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--primary-color);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button:first-child:hover {
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.button:last-child:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 #Social-container{
@@ -648,6 +726,10 @@ div#icon-container p {
     height: 15px;
     border-radius: 50%;
 }
+#Redicon, #Yellowicon, #greenicon:hover{
+    transform: scale(1);
+}
+
 #Redicon {
     background-color: red;
 }
@@ -659,6 +741,7 @@ div#icon-container p {
 #greenicon {
     background-color: green
 }
+
 
 .bash {
     color: #4ade80;
@@ -710,11 +793,35 @@ div#icon-container p {
     flex: 1;
 }
 
+/* Project Image Fixes */
 .project-image {
     position: relative;
-    aspect-ratio: 25/10; /* Wider aspect ratio for the image */
     width: 100%;
+    height: 300px; /* Fixed height for all project images */
     overflow: hidden;
+    background: var(--background);
+}
+
+.project-image img {
+    aspect-ratio: 24/5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures images cover the area without distortion */
+    object-position: center; /* Centers the image */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image {
+        height: 200px;
+    }
 }
 
 article.project-card.visible {
@@ -820,9 +927,7 @@ article.project-card.visible {
     border-radius: 1rem 1rem 0 0;
     transition: transform 0.5s ease;
 }
-.project-img img:hover {
-    transform: scale(1.05);
-}
+
 
 .project-content {
     padding: var(--spacing-lg);

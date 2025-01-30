@@ -13,25 +13,25 @@
     <div class="Navigation-container">
         <nav id="Navigation">
             <ul>
-                <li class="active">
+                <li class="active nav-item">
                     <a href="#section-1">
                         <ion-icon name="home-outline"></ion-icon>
                         <span>Home</span>
                     </a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="#section-2">
                         <ion-icon name="person-outline"></ion-icon>
                         <span>About</span>
                     </a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="#section-3">
                         <ion-icon name="code-slash-outline"></ion-icon>
                         <span>Projects</span>
                     </a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="#contact">
                         <ion-icon name="mail-outline"></ion-icon>
                         <span>Contact</span>
@@ -50,15 +50,17 @@
                     </div>
                 </div>
                 <div id="right-section">
-                    <p>👋 Hello, I'm</p>
+                    <p>👋 Hi there, i'm</p>
                     <h1>Siphesihle Mvelase</h1>
                     <h2>Software <span>Developer</span></h2>
                     <p class="intro-text">Crafting elegant digital solutions with passion and precision</p>
                     <div class="button-container">
                         <a href="lib/docs/resume.pdf" class="button">
+                            <ion-icon name="download-outline"></ion-icon>
                             <span>Download CV</span>
                         </a>
                         <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">
+                            <ion-icon name="mail-outline"></ion-icon>
                             <span>Contact Me</span>
                         </button>
                     </div>
@@ -98,6 +100,7 @@
                                     <div class="interest-tag">Problem Solving</div>
                                     <div class="interest-tag">Web Development</div>
                                     <div class="interest-tag">AI & ML</div>
+                                    <div class="interest-tag">DevOps</div>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +128,7 @@
                 <div class="grid-row">
                     <div class="grid-item item-3 reactive-container" id="languages">
                         <h2>Tool Box</h2>
-                        <h2>Explore the tools and technologies I use to bring these ideas to life</h2>
+                        <p>Explore the tools and technologies I use to bring these ideas to life</p>
                         
                         <div class="icon-container">
                             <div class="">
@@ -222,7 +225,7 @@
             </div>
         </section>
 
-        <section class="Section" id="projects">
+        <section class="Section" id="section-3">
             <div class="container">
                 <header class="text-center">
                     <h1 class="section-title">Featured Projects</h1>
@@ -232,27 +235,14 @@
                     <article class="project-card">
                         <div class="project-image">
                             <img src="lib/images/sinkhero.png" alt="Sink Hero Screenshot" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="#live-demo" class="project-link" target="_blank" rel="noopener">
-                                        <ion-icon name="globe-outline"></ion-icon>
-                                        <span>Live Demo</span>
-                                    </a>
-                                    <a href="#github" class="project-link" target="_blank" rel="noopener">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                        <span>Source Code</span>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div class="project-title-wrapper">
                                     <h3 class="project-title">Sink Hero</h3>
-                                    <span class="project-status">Completed</span>
                                 </div>
                                 <div class="project-links-desktop">
-                                    <a href="#github" class="project-icon-link" title="View Source Code">
+                                    <a href="https://github.com/SpherCodes/Sink-Hero" class="project-icon-link" title="View Source Code">
                                         <ion-icon name="logo-github"></ion-icon>
                                     </a>
                                     <a href="#live" class="project-icon-link" title="View Live Demo">
@@ -262,18 +252,15 @@
                             </div>
                             <div class="project-meta">
                                 <span class="project-date">2024</span>
-                                <span class="project-type">Full Stack App</span>
+                                <span class="project-type"></span>
                             </div>
                             <p class="project-description">
-                                A comprehensive water management solution that helps users monitor and optimize their water usage. 
-                                Features real-time tracking, usage analytics, and personalized conservation tips.
+                                Sink Hero is a web-based maze game where players navigate a ball through the maze using their device's gyroscope sensors.
                             </p>
                             <div class="project-features">
                                 <h4>Key Features:</h4>
                                 <ul>
-                                    <li>Real-time water usage monitoring</li>
-                                    <li>Interactive usage visualizations</li>
-                                    <li>Personalized conservation tips</li>
+                                    <li>Gyroscope -based navigation</li>
                                 </ul>
                             </div>
                             <div class="tech-stack">
@@ -286,28 +273,15 @@
                     </article>
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="lib/images/sinkhero.png" alt="Sink Hero Screenshot" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="#live-demo" class="project-link" target="_blank" rel="noopener">
-                                        <ion-icon name="globe-outline"></ion-icon>
-                                        <span>Live Demo</span>
-                                    </a>
-                                    <a href="#github" class="project-link" target="_blank" rel="noopener">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                        <span>Source Code</span>
-                                    </a>
-                                </div>
-                            </div>
+                            <img src="lib/images/Horizon.png" alt="Sink Hero Screenshot" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div class="project-title-wrapper">
                                     <h3 class="project-title">Horizon Finance</h3>
-                                    <span class="project-status">In progress</span>
                                 </div>
                                 <div class="project-links-desktop">
-                                    <a href="#github" class="project-icon-link" title="View Source Code">
+                                    <a href="https://github.com/SpherCodes/Sink-Hero" class="project-icon-link" title="View Source Code">
                                         <ion-icon name="logo-github"></ion-icon>
                                     </a>
                                     <a href="#live" class="project-icon-link" title="View Live Demo">
@@ -320,23 +294,23 @@
                                 <span class="project-type">Full Stack App</span>
                             </div>
                             <p class="project-description">
-                                A comprehensive water management solution that helps users monitor and optimize their water usage. 
-                                Features real-time tracking, usage analytics, and personalized conservation tips.
+                                Horizon Finance is a full-stack web application designed to help users track their expenses and income efficiently.
+                                It allows users to check balances across all connected bank accounts in one place.
+                                With the ability to link multiple bank accounts, users can seamlessly monitor their transactions within the application.
                             </p>
                             <div class="project-features">
                                 <h4>Key Features:</h4>
                                 <ul>
-                                    <li>Real-time water usage monitoring</li>
-                                    <li>Interactive usage visualizations</li>
-                                    <li>Personalized conservation tips</li>
+                                    <li>Transaction monitoring</li>
+                                    <li>Fund Transfer</li>
+                                    <li>Linking multiple bank accounts</li> 
                                 </ul>
                             </div>
                             <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Next.js</span>
-                                <span class="tech-badge">Appwrite</span>
-                                <span class="tech-badge">Chart.js</span>
-                                <span class="tech-badge">Tailwind css</span>
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express.js</span>
+                                <span class="tech-badge">javascript</span>
                             </div>
                         </div>
                     </article>

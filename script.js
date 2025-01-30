@@ -33,23 +33,27 @@ document.addEventListener('DOMContentLoaded', function() {
     typeCommand();
 
     /////////Scrolling logic
-    const NavElements = document.querySelectorAll('.nav-link');
+    const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('.Section');
     const navMenu = document.getElementById('Navigation');
 
+
+    console.log(navItems)
     let currentSection = 0;
+
+    navItems.forEach((navElement, index) => {
+        navElement.addEventListener('click', (event) => {
+            console.log(navItems)
+            navItems.forEach(item => item.classList.remove('active'));
+            navElement.classList.add('active');
+            showSection(index);
+        });
+    });
 
     window.addEventListener('load', () => {
         showNavigation(navMenu);
         DisplaySections(1);
 
-        NavElements.forEach((navElement, index) => {
-            navElement.addEventListener('click', (event) => {
-                NavElements.forEach(item => item.classList.remove('active'));
-                event.target.classList.add('active');
-                showSection(index);
-            });
-        });
     });
 
     function showNavigation(navMenu) {

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     ///// Terminal Typing logic
     const commandText = 'AboutMe';
-    const aboutMeText = `I am a developer with a passion for creating innovative solutions , I Love coding and learning new thing pushing the boundaries of what is possible.
-    I am a BSc graduate from the University of the Free State with a passion for software development. 
-                                My journey in tech has equipped me with strong problem-solving skills and a deep understanding of software development principles.`;
+    const aboutMeText = `I am a software developer passionate about creating innovative solutions and pushing the boundaries of what’s possible. 
+    I love coding and continuously learning new technologies to enhance my skills. As a Computer Science graduate, 
+    my journey in tech has equipped me with strong problem-solving abilities and a deep understanding of software development principles.`;
 
     const commandElement = document.getElementById('command');
     const aboutMeElement = document.getElementById('Response');

@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     },{
         root: null,
-        threshold: 0.20
+        threshold: 0.30
     });
 
     console.log(document.querySelectorAll('.project-card'))
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, {
-            threshold: 0.1,
+            threshold: 0.3,
             rootMargin: '0px 0px -50px 0px'
         });
 

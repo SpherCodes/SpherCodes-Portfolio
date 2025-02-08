@@ -94,6 +94,7 @@
 /***Navigation Styling*****/
 .Navigation-container {
     position: fixed;
+    opacity: 0.9;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
@@ -391,14 +392,15 @@ div#right-section .button-container {
 }
 
 #profile-card::after {
-    content: "";
+    content: "hello";
+    opacity: 1;
     position: absolute;
     width: 100%;
-    top: 15em;
-    background: rgba(0, 0, 0, 0.3);
+    bottom: -4em;
+    background: black;
     border-radius: 80%;
-    z-index: 5;
-    filter: blur(25px);
+    z-index: 2;
+    filter: blur(23px);
 }
 /* Keyframes for Floating Effect */
 @keyframes float {

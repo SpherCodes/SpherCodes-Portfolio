@@ -94,7 +94,7 @@
 /***Navigation Styling*****/
 .Navigation-container {
     position: fixed;
-    opacity: 0.9;
+    opacity: 0.8;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
@@ -112,6 +112,10 @@
     min-width: 320px;
 }
 
+.Navigation-container:hover{
+    opacity: 1;
+}
+
 #Navigation {
     display: flex;
     justify-content: center;
@@ -121,7 +125,6 @@
     margin: 0;
     padding: 0;
     transform: none;
-    opacity: 1;
 }
 
 nav ul {

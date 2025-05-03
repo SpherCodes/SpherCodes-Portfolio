@@ -47,31 +47,45 @@
             <div class="container page">
                 <div id="left-section">
                     <div id="profile-card">
+                        <div class="card-glow"></div>
                         <img src="lib/images/young-programmer.jpg" alt="Profile Picture" class="profile-image">
+                        <div class="profile-card-blur"></div>
                     </div>
                 </div>
                 <div id="right-section">
-                    <p>👋 Hi there, i'm</p>
-                    <h1>Siphesihle Mvelase</h1>
-                    <h2>Software <span>Developer</span></h2>
-                    <p class="intro-text">Crafting elegant digital solutions with passion and precision</p>
-                    <div class="button-container">
-                        <a href="lib/docs/Siphesihle-Mvelase-CV.pdf" class="button">
-                            <ion-icon name="download-outline"></ion-icon>
-                            <span>Download CV</span>
-                        </a>
-                        <button type="button" class="button" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">
-                            <ion-icon name="mail-outline"></ion-icon>
-                            <span>Contact Me</span>
-                        </button>
-                    </div>
-                    <div id="Social-container">
-                        <a href="https://github.com/sphercodes" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="https://linkedin.com/in/sphercodes" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
+                    <div class="hero-content">
+                        <div class="greeting">
+                            <span class="wave">👋</span>
+                            <span class="greeting-text">Hi there, I'm</span>
+                        </div>
+                        <h1 class="name">Siphesihle Mvelase</h1>
+                        <div class="role-wrapper">
+                            <h2>Software <span class="highlight">Developer</span></h2>
+                            <div class="role-badges">
+                                <span class="role-badge">Full Stack</span>
+                                <span class="role-badge">Web3</span>
+                                <span class="role-badge">Cloud</span>
+                            </div>
+                        </div>
+                        <p class="intro-text">Crafting elegant digital solutions with passion and precision</p>
+                        <div class="button-container">
+                            <a href="lib/docs/Siphesihle-Mvelase-CV.pdf" class="button download-btn">
+                                <ion-icon name="download-outline"></ion-icon>
+                                <span>Download CV</span>
+                            </a>
+                            <button type="button" class="button contact-btn" onclick="window.location.href='mailto:sphersphiwe24@gmail.com'">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <span>Contact Me</span>
+                            </button>
+                        </div>
+                        <div id="Social-container">
+                            <a href="https://github.com/sphercodes" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                            <a href="https://linkedin.com/in/sphercodes" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,57 +146,58 @@
                         <h2>Tool Box</h2>
                         <p>Explore the tools and technologies I use to bring these ideas to life</p>
                         
-                        <div class="icon-container ">
-                            <div class="">
-                                <div class="icon-item">
-                                    <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="icon">
-                                    <span class="icon-name">C#</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/NET core.svg" alt="C# Logo" class="icon">
-                                    <span class="icon-name">.Net Core</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="icon">
-                                    <span class="icon-name">JavaScript</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/python.svg" alt="Python Logo" class="icon">
-                                    <span class="icon-name">Python</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/bash.svg" alt="Bash Script Logo" class="icon">
-                                    <span class="icon-name">Bash</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/html5.svg" alt="HTML5 Logo" class="icon">
-                                    <span class="icon-name">HTML5</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/css3.svg" alt="CSS3 Logo" class="icon">
-                                    <span class="icon-name">CSS3</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/Tailwind.png" alt="CSS3 Logo" class="icon">
-                                    <span class="icon-name">Tailwind.css</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="icon">
-                                    <span class="icon-name">Bootstrap</span>
-                                </div>
-                                <div class="icon-item">
-                                    <img src="lib/images/TypeScript.svg" alt="Node.js Logo" class="icon">
-                                    <span class="icon-name">Type-Script</span>
-                                </div> <div class="icon-item">
-                                    <img src="lib/images/React.svg" alt="Node.js Logo" class="icon">
-                                    <span class="icon-name">React</span>
-                                </div> <div class="icon-item">
-                                    <img src="lib/images/Next.js.svg" alt="Node.js Logo" class="icon">
-                                    <span class="icon-name">Next.js</span>
-                                </div> <div class="icon-item">
-                                    <img src="lib/images/nodejs.svg" alt="Node.js Logo" class="icon">
-                                    <span class="icon-name">Node.js</span>
-                                </div>
+                        <div class="icon-container">
+                            <div class="icon-item">
+                                <img src="lib/images/Csharp_Logo.png" alt="C# Logo" class="icon">
+                                <span class="icon-name">C#</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/NET core.svg" alt=".Net Core Logo" class="icon">
+                                <span class="icon-name">.Net Core</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/javascript.svg" alt="JavaScript Logo" class="icon">
+                                <span class="icon-name">JavaScript</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/python.svg" alt="Python Logo" class="icon">
+                                <span class="icon-name">Python</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/bash.svg" alt="Bash Script Logo" class="icon">
+                                <span class="icon-name">Bash</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/html5.svg" alt="HTML5 Logo" class="icon">
+                                <span class="icon-name">HTML5</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/css3.svg" alt="CSS3 Logo" class="icon">
+                                <span class="icon-name">CSS3</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/Tailwind.png" alt="Tailwind CSS Logo" class="icon">
+                                <span class="icon-name">Tailwind.css</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/bootstrap.svg" alt="Bootstrap Logo" class="icon">
+                                <span class="icon-name">Bootstrap</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/TypeScript.svg" alt="TypeScript Logo" class="icon">
+                                <span class="icon-name">Type-Script</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/React.svg" alt="React Logo" class="icon">
+                                <span class="icon-name">React</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/Next.js.svg" alt="Next.js Logo" class="icon">
+                                <span class="icon-name">Next.js</span>
+                            </div>
+                            <div class="icon-item">
+                                <img src="lib/images/nodejs.svg" alt="Node.js Logo" class="icon">
+                                <span class="icon-name">Node.js</span>
                             </div>
                         </div>
                     </div>
@@ -412,5 +427,9 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
